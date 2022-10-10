@@ -1,1 +1,1 @@
-# pelco-eloqua-lp-template
+# eloqua-lp-template
