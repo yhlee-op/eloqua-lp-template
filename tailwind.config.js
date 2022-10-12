@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: ["*.html", "*.js"],
+  purge: ["./*.html", "./*.js"],
   content: [],
   theme: {
     screens: {
@@ -17,7 +17,8 @@ module.exports = {
       colors: {
         'primary':'#00729D',
         'secondary':'#085B7D',
-        'tertiary':'#242A35'
+        'tertiary':'#242A35',
+        'ctaDivider': '#060808'
       },
       spacing: {
         '100': '25rem',
