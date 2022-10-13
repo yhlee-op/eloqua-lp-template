@@ -851,11 +851,6 @@ html {
   height: max-content;
 }
 
-.h-fit {
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
 .h-32 {
   height: 8rem;
 }
@@ -870,6 +865,11 @@ html {
 
 .h-full {
   height: 100%;
+}
+
+.h-fit {
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .max-h-144 {
@@ -977,13 +977,13 @@ html {
   gap: 2rem;
 }
 
-.gap-x-8 {
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
+.gap-x-12 {
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
 }
 
-.gap-y-2 {
-  row-gap: 0.5rem;
+.gap-y-4 {
+  row-gap: 1rem;
 }
 
 .gap-y-6 {
@@ -1211,6 +1211,11 @@ html {
   padding-bottom: 1rem;
 }
 
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -1229,11 +1234,6 @@ html {
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-}
-
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 
 .py-48 {
