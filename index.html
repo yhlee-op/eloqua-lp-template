@@ -29,9 +29,11 @@
         <div class="flex h-16 justify-between">
           <div class="flex">
             <div class="flex flex-shrink-0 items-center">
-              <img class="block h-8 w-auto lg:hidden"
+              <!-- Mobile Logo -->
+              <img class="block h-6 w-auto lg:hidden"
                 src="https://assets.pelco.com/media/26f46b2c-e15c-411f-b54e-47269077614a/Pelco-Logo.png"
                 alt="Your Company">
+              <!-- Desktop Logo -->
               <img class="hidden h-8 w-auto lg:block"
                 src="https://assets.pelco.com/media/26f46b2c-e15c-411f-b54e-47269077614a/Pelco-Logo.png"
                 alt="Your Company">
@@ -51,8 +53,8 @@
           </div>
           <div class="-mr-2 flex items-center sm:hidden">
             <!-- Mobile menu button -->
-            <button type="button"
-              class="inline-flex items-center justify-center rounded-2xl p-2 text-gray-400 hover:bg-gray-100 hover:text-primary focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+            <button type="button" id="mobile-burger-button"
+              class="inline-flex items-center justify-center rounded-lg p-2 text-white hover:bg-gray-100 hover:text-primary"
               aria-controls="mobile-menu" aria-expanded="false">
               <span class="sr-only">Open main menu</span>
               <!--
@@ -83,16 +85,19 @@
       </div>
 
       <!-- Mobile menu, show/hide based on menu state. -->
-      <div class="sm:hidden" id="mobile-menu">
-        <div class="space-y-1 pt-2 pb-3">
-          <!-- Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-white hover:bg-gray-50 hover:border-white hover:text-gray-700" -->
-          <a href="#"
-            class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-white hover:border-white hover:bg-gray-50 hover:text-gray-700">Products</a>
-          <a href="#"
-            class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-white hover:border-white hover:bg-gray-50 hover:text-gray-700">Solutions</a>
-          <a href="#"
-            class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-white hover:border-white hover:bg-gray-50 hover:text-gray-700">Services</a>
+      <div class="relative">
+        <div class="hidden absolute z-10 bg-primary w-full" id="mobile-menu">
+          <div class="space-y-1 pt-2 pb-3">
+            <!-- Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-white hover:bg-gray-50 hover:border-white hover:text-gray-700" -->
+            <a href="#"
+              class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-white hover:border-white hover:bg-gray-50 hover:text-gray-700">Products</a>
+            <a href="#"
+              class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-white hover:border-white hover:bg-gray-50 hover:text-gray-700">Solutions</a>
+            <a href="#"
+              class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-white hover:border-white hover:bg-gray-50 hover:text-gray-700">Services</a>
+          </div>
         </div>
+
       </div>
     </nav>
   </header>
@@ -105,11 +110,17 @@
         <div class="px-4 py-5 sm:p-6 max-h-144 md:max-h-100">
           <!-- Content goes here -->
           <div class="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-            <h1 class="text-tertiary text-5xl font-bold max-w-2xl">VIDEO SECURITY AND ACCESS CONTROL FOR <span class="text-primary">AIRPORTS</span></h1>
-            <p class="mt-4 text-base font-medium max-w-2xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <h1 class="text-tertiary text-5xl font-bold max-w-2xl">VIDEO SECURITY AND ACCESS CONTROL FOR <span
+                class="text-primary">AIRPORTS</span></h1>
+            <p class="mt-4 text-base font-medium max-w-2xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+              do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <div>
-              <a href="#" class="mr-4 mt-8 inline-flex items-center rounded-full border border-transparent bg-primary px-5 py-2 text-base font-medium text-white shadow-sm hover:bg-secondary">Button text</a>
-              <a href="#" class="mr-4 mt-8 inline-flex items-center rounded-full border border-transparent bg-white px-5 py-2 text-base font-medium text-black shadow-sm hover:bg-black hover:text-white">Button text2</a>
+              <a href="#"
+                class="mr-4 mt-8 inline-flex items-center rounded-full border border-transparent bg-primary px-5 py-2 text-base font-medium text-white shadow-sm hover:bg-secondary">Button
+                text</a>
+              <a href="#"
+                class="mr-4 mt-8 inline-flex items-center rounded-full border border-transparent bg-white px-5 py-2 text-base font-medium text-black shadow-sm hover:bg-black hover:text-white">Button
+                text2</a>
             </div>
           </div>
         </div>
@@ -119,49 +130,64 @@
     <!-- 2. Trusted By -->
     <div class="bg-gray-200 flex flex-col justify-center w-full py-4">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h5 class="text-xl font-semibold text-gray-500 flex justify-center">Trusted by 1000+ organizations across the globe</h5>
+        <h5 class="text-xl font-semibold text-gray-500 flex justify-center">Trusted by 1000+ organizations across the
+          globe</h5>
         <!-- We've used 3xl here, but feel free to try other max-widths based on your needs -->
         <div class="mt-4 mx-auto max-w-5xl">
           <!-- Content goes here -->
           <ul role="list" class="grid grid-cols-4 gap-x-8 gap-y-2 md:grid-cols-8">
             <li class="relative">
               <div class="group block w-full h-32 overflow-hidden rounded-2xl bg-gray-200">
-                <img src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/US_Air_Force.png" alt="US_Air_Force" class="pointer-events-none object-fill group-hover:opacity-75">
+                <img
+                  src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/US_Air_Force.png"
+                  alt="US_Air_Force" class="pointer-events-none object-fill group-hover:opacity-75">
               </div>
             </li>
             <li class="relative">
               <div class="group block w-full h-32 overflow-hidden rounded-2xl bg-gray-200">
-                <img src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/SSM_Health.png" alt="SSM_Health" class="pointer-events-none object-fill group-hover:opacity-75">
+                <img src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/SSM_Health.png"
+                  alt="SSM_Health" class="pointer-events-none object-fill group-hover:opacity-75">
               </div>
             </li>
             <li class="relative">
               <div class="group block w-full h-32 overflow-hidden rounded-2xl bg-gray-200">
-                <img src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/Fulton_County.png" alt="Fulton_County" class="pointer-events-none object-fill group-hover:opacity-75">
+                <img
+                  src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/Fulton_County.png"
+                  alt="Fulton_County" class="pointer-events-none object-fill group-hover:opacity-75">
               </div>
             </li>
             <li class="relative">
               <div class="group block w-full h-32 overflow-hidden rounded-2xl bg-gray-200">
-                <img src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/Chipotle.png" alt="Chipotle" class="pointer-events-none object-fill group-hover:opacity-75">
+                <img src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/Chipotle.png"
+                  alt="Chipotle" class="pointer-events-none object-fill group-hover:opacity-75">
               </div>
             </li>
             <li class="relative">
               <div class="group block w-full h-32 overflow-hidden rounded-2xl bg-gray-200">
-                <img src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/Alabama_Power%20copy.png" alt="Alabama_Power" class="pointer-events-none object-fill group-hover:opacity-75">
+                <img
+                  src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/Alabama_Power%20copy.png"
+                  alt="Alabama_Power" class="pointer-events-none object-fill group-hover:opacity-75">
               </div>
             </li>
             <li class="relative">
               <div class="group block w-full h-32 overflow-hidden rounded-2xl bg-gray-200">
-                <img src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/Mount_Vernon_Police.png" alt="Mount_Vernon_Police" class="pointer-events-none object-fill group-hover:opacity-75">
+                <img
+                  src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/Mount_Vernon_Police.png"
+                  alt="Mount_Vernon_Police" class="pointer-events-none object-fill group-hover:opacity-75">
               </div>
             </li>
             <li class="relative">
               <div class="group block w-full h-32 overflow-hidden rounded-2xl bg-gray-200">
-                <img src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/Vodafone_Arena.png" alt="Vodafone_Arena" class="pointer-events-none object-fill group-hover:opacity-75">
+                <img
+                  src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/Vodafone_Arena.png"
+                  alt="Vodafone_Arena" class="pointer-events-none object-fill group-hover:opacity-75">
               </div>
             </li>
             <li class="relative">
               <div class="group block w-full h-32 overflow-hidden rounded-2xl bg-gray-200">
-                <img src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/Chukchansi_Gold.png" alt="Chukchansi_Gold" class="pointer-events-none object-fill group-hover:opacity-75">
+                <img
+                  src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/Chukchansi_Gold.png"
+                  alt="Chukchansi_Gold" class="pointer-events-none object-fill group-hover:opacity-75">
               </div>
             </li>
 
@@ -188,38 +214,53 @@
             <main class="">
               <div class="mx-auto max-w-7xl">
                 <div class="lg:grid lg:grid-cols-12 lg:gap-8 lg:items-center">
-                  <div class="px-4 sm:px-6 sm:text-center md:mx-auto md:max-w-2xl lg:col-span-6 lg:flex lg:items-center lg:text-left">
+                  <div
+                    class="px-4 sm:px-6 sm:text-center md:mx-auto md:max-w-2xl lg:col-span-6 lg:flex lg:items-center lg:text-left">
                     <div>
                       <h2 class="font-bold tracking-tight text-black text-4xl">Turpis egestas sed tation ullam</h2>
-                      <p class="mt-4 text-base text-black">Anim aute id magna eiusmod  aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt ad minim veniam, quis nostrud amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.</p>
+                      <p class="mt-4 text-base text-black">Anim aute id magna eiusmod aliqua ad ad non deserunt sunt.
+                        Qui irure qui lorem cupidatat commodo. Elit sunt ad minim veniam, quis nostrud amet fugiat
+                        veniam occaecat fugiat aliqua ad ad non deserunt sunt.</p>
                       <div class="mt-5 w-full sm:mx-auto sm:max-w-lg lg:ml-0">
                         <div class="flex flex-col items-start">
                           <div class="flex">
-                            <img class="mt-1 w-16 h-16 mr-4 pointer-events-none object-fit group-hover:opacity-75" src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/fast-automated-tracking-icon.png" alt="" >
+                            <img class="mt-1 w-16 h-16 mr-4 pointer-events-none object-fit group-hover:opacity-75"
+                              src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/fast-automated-tracking-icon.png"
+                              alt="">
                             <div>
                               <p class="text-base font-bold">1. Feugiat in ante metus commodo dictum urna faucibus.</p>
-                              <p class="text-base">Enim sed faucibus turpis in eu. At urna condimentum mattis pellentesque id sint occa ecatsed cupidatat eprehenderit in.</p>
+                              <p class="text-base">Enim sed faucibus turpis in eu. At urna condimentum mattis
+                                pellentesque id sint occa ecatsed cupidatat eprehenderit in.</p>
                             </div>
                           </div>
                           <div class="flex mt-4">
-                            <img class="mt-1 w-16 h-16 mr-4 pointer-events-none object-fit group-hover:opacity-75" src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/quality-life-healthcare-pelco-icon.png" alt="" >
+                            <img class="mt-1 w-16 h-16 mr-4 pointer-events-none object-fit group-hover:opacity-75"
+                              src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/quality-life-healthcare-pelco-icon.png"
+                              alt="">
                             <div>
                               <p class="text-base font-bold">2. Feugiat in ante metus dictum.</p>
-                              <p class="text-base">Enim sed faucibus turpis in eu. At urna condimentum mattis pellentesque id. </p>
+                              <p class="text-base">Enim sed faucibus turpis in eu. At urna condimentum mattis
+                                pellentesque id. </p>
                             </div>
                           </div>
                           <div class="flex mt-4">
-                            <img class="mt-1 w-16 h-16 mr-4 pointer-events-none object-fit group-hover:opacity-75" src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/pelco-smart-compression-h265-h264-icon.png" alt="" >
+                            <img class="mt-1 w-16 h-16 mr-4 pointer-events-none object-fit group-hover:opacity-75"
+                              src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/pelco-smart-compression-h265-h264-icon.png"
+                              alt="">
                             <div>
                               <p class="text-base font-bold">3. Feugiat in ante metus dictum.</p>
-                              <p class="text-base">Enim sed faucibus turpis in eu. At urna condimentum mattis pellentesque id.</p>
+                              <p class="text-base">Enim sed faucibus turpis in eu. At urna condimentum mattis
+                                pellentesque id.</p>
                             </div>
                           </div>
                           <div class="flex mt-4">
-                            <img class="mt-1 w-16 h-16 mr-4 pointer-events-none object-fit group-hover:opacity-75" src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/pelco-smart-analytics-icon.png" alt="" >
+                            <img class="mt-1 w-16 h-16 mr-4 pointer-events-none object-fit group-hover:opacity-75"
+                              src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/pelco-smart-analytics-icon.png"
+                              alt="">
                             <div>
                               <p class="text-base font-bold">4. Feugiat in ante metus dictum.</p>
-                              <p class="text-base">Enim sed faucibus turpis in eu. At urna condimentum mattis pellentesque id.</p>
+                              <p class="text-base">Enim sed faucibus turpis in eu. At urna condimentum mattis
+                                pellentesque id.</p>
                             </div>
                           </div>
 
@@ -238,36 +279,49 @@
                           <form action="#" method="POST" class="space-y-6">
                             <div>
                               <label for="first-name" class="sr-only">Fist name</label>
-                              <input type="text" name="first-name" id="first-name" autocomplete="first-name" placeholder="First name" required class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                              <input type="text" name="first-name" id="first-name" autocomplete="first-name"
+                                placeholder="First name" required
+                                class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                             </div>
 
                             <div>
                               <label for="last-name" class="sr-only">Last name</label>
-                              <input type="text" name="last-name" id="last-name" autocomplete="family-name" placeholder="Last name" required class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                              <input type="text" name="last-name" id="last-name" autocomplete="family-name"
+                                placeholder="Last name" required
+                                class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                             </div>
 
                             <div>
                               <label for="company" class="sr-only">Company</label>
-                              <input type="text" name="company" id="company" autocomplete="company" placeholder="Company" required class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                              <input type="text" name="company" id="company" autocomplete="company"
+                                placeholder="Company" required
+                                class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                             </div>
 
                             <div>
                               <label for="email" class="sr-only">Email</label>
-                              <input type="text" name="email" id="email" autocomplete="email" placeholder="Email" required class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                              <input type="text" name="email" id="email" autocomplete="email" placeholder="Email"
+                                required
+                                class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                             </div>
 
                             <div>
                               <label for="phone" class="sr-only">Phone number</label>
-                              <input type="text" name="phone" id="phone" autocomplete="phone" placeholder="Phone number" required class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                              <input type="text" name="phone" id="phone" autocomplete="phone" placeholder="Phone number"
+                                required
+                                class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                             </div>
 
                             <div>
                               <label for="message" class="sr-only">Message</label>
-                              <textarea id="message" name="message" rows="3" placeholder="How can we help?" class="block w-full max-w-lg rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></textarea>
+                              <textarea id="message" name="message" rows="3" placeholder="How can we help?"
+                                class="block w-full max-w-lg rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></textarea>
                             </div>
 
                             <div>
-                              <button type="submit" class="flex w-full justify-center rounded-2xl border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-secondary">Form submit button</button>
+                              <button type="submit"
+                                class="flex w-full justify-center rounded-2xl border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-secondary">Form
+                                submit button</button>
                             </div>
                           </form>
                         </div>
@@ -293,38 +347,53 @@
             <main class="">
               <div class="mx-auto max-w-7xl">
                 <div class="lg:grid lg:grid-cols-12 lg:gap-8 lg:items-center">
-                  <div class="px-4 sm:px-6 sm:text-center md:mx-auto md:max-w-2xl lg:col-span-6 lg:flex lg:items-center lg:text-left">
+                  <div
+                    class="px-4 sm:px-6 sm:text-center md:mx-auto md:max-w-2xl lg:col-span-6 lg:flex lg:items-center lg:text-left">
                     <div>
                       <h2 class="font-bold tracking-tight text-black text-4xl">Turpis egestas sed tation ullam</h2>
-                      <p class="mt-4 text-base text-black">Anim aute id magna eiusmod  aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt ad minim veniam, quis nostrud amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.</p>
+                      <p class="mt-4 text-base text-black">Anim aute id magna eiusmod aliqua ad ad non deserunt sunt.
+                        Qui irure qui lorem cupidatat commodo. Elit sunt ad minim veniam, quis nostrud amet fugiat
+                        veniam occaecat fugiat aliqua ad ad non deserunt sunt.</p>
                       <div class="mt-5 w-full sm:mx-auto sm:max-w-lg lg:ml-0">
                         <div class="flex flex-col items-start">
                           <div class="flex">
-                            <img class="mt-1 w-16 h-16 mr-4 pointer-events-none object-fit group-hover:opacity-75" src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/fast-automated-tracking-icon.png" alt="" >
+                            <img class="mt-1 w-16 h-16 mr-4 pointer-events-none object-fit group-hover:opacity-75"
+                              src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/fast-automated-tracking-icon.png"
+                              alt="">
                             <div>
                               <p class="text-base font-bold">1. Feugiat in ante metus commodo dictum urna faucibus.</p>
-                              <p class="text-base">Enim sed faucibus turpis in eu. At urna condimentum mattis pellentesque id sint occa ecatsed cupidatat eprehenderit in.</p>
+                              <p class="text-base">Enim sed faucibus turpis in eu. At urna condimentum mattis
+                                pellentesque id sint occa ecatsed cupidatat eprehenderit in.</p>
                             </div>
                           </div>
                           <div class="flex mt-4">
-                            <img class="mt-1 w-16 h-16 mr-4 pointer-events-none object-fit group-hover:opacity-75" src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/quality-life-healthcare-pelco-icon.png" alt="" >
+                            <img class="mt-1 w-16 h-16 mr-4 pointer-events-none object-fit group-hover:opacity-75"
+                              src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/quality-life-healthcare-pelco-icon.png"
+                              alt="">
                             <div>
                               <p class="text-base font-bold">2. Feugiat in ante metus dictum.</p>
-                              <p class="text-base">Enim sed faucibus turpis in eu. At urna condimentum mattis pellentesque id. </p>
+                              <p class="text-base">Enim sed faucibus turpis in eu. At urna condimentum mattis
+                                pellentesque id. </p>
                             </div>
                           </div>
                           <div class="flex mt-4">
-                            <img class="mt-1 w-16 h-16 mr-4 pointer-events-none object-fit group-hover:opacity-75" src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/pelco-smart-compression-h265-h264-icon.png" alt="" >
+                            <img class="mt-1 w-16 h-16 mr-4 pointer-events-none object-fit group-hover:opacity-75"
+                              src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/pelco-smart-compression-h265-h264-icon.png"
+                              alt="">
                             <div>
                               <p class="text-base font-bold">3. Feugiat in ante metus dictum.</p>
-                              <p class="text-base">Enim sed faucibus turpis in eu. At urna condimentum mattis pellentesque id. </p>
+                              <p class="text-base">Enim sed faucibus turpis in eu. At urna condimentum mattis
+                                pellentesque id. </p>
                             </div>
                           </div>
                           <div class="flex mt-4">
-                            <img class="mt-1 w-16 h-16 mr-4 pointer-events-none object-fit group-hover:opacity-75" src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/pelco-smart-analytics-icon.png" alt="" >
+                            <img class="mt-1 w-16 h-16 mr-4 pointer-events-none object-fit group-hover:opacity-75"
+                              src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/pelco-smart-analytics-icon.png"
+                              alt="">
                             <div>
                               <p class="text-base font-bold">4. Feugiat in ante metus dictum.</p>
-                              <p class="text-base">Enim sed faucibus turpis in eu. At urna condimentum mattis pellentesque id. </p>
+                              <p class="text-base">Enim sed faucibus turpis in eu. At urna condimentum mattis
+                                pellentesque id. </p>
                             </div>
                           </div>
 
@@ -338,42 +407,57 @@
                         <div class="">
                           <div class="bg-black px-4 py-8 sm:px-10 flex flex-col justify-center">
                             <span class="w-full text-center text-primary text-lg font-bold">Quam lacus suspe?</span>
-                            <h3 class="mt-2 w-full text-center text-white text-3xl font-bold">This is the form title!</h3>
+                            <h3 class="mt-2 w-full text-center text-white text-3xl font-bold">This is the form title!
+                            </h3>
                           </div>
-                          <form action="#" method="POST" class="px-4 py-8 sm:px-10 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-2">
+                          <form action="#" method="POST"
+                            class="px-4 py-8 sm:px-10 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-2">
 
                             <div class="sm:col-span-1">
                               <label for="first-name" class="sr-only">Fist name</label>
-                              <input type="text" name="first-name" id="first-name" autocomplete="first-name" placeholder="First name" required class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                              <input type="text" name="first-name" id="first-name" autocomplete="first-name"
+                                placeholder="First name" required
+                                class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                             </div>
 
                             <div class="sm:col-span-1">
                               <label for="last-name" class="sr-only">Last name</label>
-                              <input type="text" name="last-name" id="last-name" autocomplete="family-name" placeholder="Last name" required class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                              <input type="text" name="last-name" id="last-name" autocomplete="family-name"
+                                placeholder="Last name" required
+                                class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                             </div>
 
                             <div class="sm:col-span-1">
                               <label for="company" class="sr-only">Company</label>
-                              <input type="text" name="company" id="company" autocomplete="company" placeholder="Company" required class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                              <input type="text" name="company" id="company" autocomplete="company"
+                                placeholder="Company" required
+                                class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                             </div>
 
                             <div class="sm:col-span-1">
                               <label for="phone" class="sr-only">Phone number</label>
-                              <input type="text" name="phone" id="phone" autocomplete="phone" placeholder="Phone number" required class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                              <input type="text" name="phone" id="phone" autocomplete="phone" placeholder="Phone number"
+                                required
+                                class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                             </div>
 
                             <div class="sm:col-span-2">
                               <label for="email" class="sr-only">Email</label>
-                              <input type="text" name="email" id="email" autocomplete="email" placeholder="Email" required class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                              <input type="text" name="email" id="email" autocomplete="email" placeholder="Email"
+                                required
+                                class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                             </div>
 
                             <div class="sm:col-span-2">
                               <label for="message" class="sr-only">Message</label>
-                              <textarea id="message" name="message" rows="3" placeholder="How can we help?" class="block w-full max-w-lg rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></textarea>
+                              <textarea id="message" name="message" rows="3" placeholder="How can we help?"
+                                class="block w-full max-w-lg rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></textarea>
                             </div>
 
                             <div class="sm:col-span-2">
-                              <button type="submit" class="flex w-full justify-center rounded-2xl border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-secondary">Form submit button</button>
+                              <button type="submit"
+                                class="flex w-full justify-center rounded-2xl border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-secondary">Form
+                                submit button</button>
                             </div>
                           </form>
                         </div>
@@ -397,36 +481,50 @@
         <div class="px-6 py-6 rounded-xl w-full shadow-xl bg-gray-100">
           <div class="space-y-2 lg:grid lg:grid-cols-2 lg:gap-x-4 lg:items-center">
             <div class="lg:col-span-1">
-              <iframe class="rounded-2xl w-full h-100 shadow-lg" src="https://www.youtube.com/embed/YixbZDuawBY?start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe class="rounded-2xl w-full h-100 shadow-lg" src="https://www.youtube.com/embed/YixbZDuawBY?start=1"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
             </div>
             <div class="lg:col-span-1">
               <div class="lg:pl-10">
                 <h3 class="text-3xl font-bold tracking-tight text-tertiary">Award winning support</h3>
-                <p class="mt-2 text-base tracking-tight text-tertiary">Arcu bibendum at varius vel. Laoreet sit amet cursus sit amet dictum. Non arcu risus quis varius quam quisque. </p>
+                <p class="mt-2 text-base tracking-tight text-tertiary">Arcu bibendum at varius vel. Laoreet sit amet
+                  cursus sit amet dictum. Non arcu risus quis varius quam quisque. </p>
                 <div class="flex mt-4">
-                  <img class="mt-1 w-16 h-16 mr-4 pointer-events-none object-fit group-hover:opacity-75" src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/fast-automated-tracking-icon.png" alt="" >
+                  <img class="mt-1 w-16 h-16 mr-4 pointer-events-none object-fit group-hover:opacity-75"
+                    src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/fast-automated-tracking-icon.png"
+                    alt="">
                   <div>
                     <p class="text-base font-bold">1. Feugiat in ante metus dictum urna faucibus.</p>
-                    <p class="text-base">Enim sed faucibus turpis in eu. At urna condimentum mattis pellentesque id sint occa ecatsed cupidatat.</p>
+                    <p class="text-base">Enim sed faucibus turpis in eu. At urna condimentum mattis pellentesque id sint
+                      occa ecatsed cupidatat.</p>
                   </div>
                 </div>
                 <div class="flex mt-4">
-                  <img class="mt-1 w-16 h-16 mr-4 pointer-events-none object-fit group-hover:opacity-75" src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/quality-life-healthcare-pelco-icon.png" alt="" >
+                  <img class="mt-1 w-16 h-16 mr-4 pointer-events-none object-fit group-hover:opacity-75"
+                    src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/quality-life-healthcare-pelco-icon.png"
+                    alt="">
                   <div>
                     <p class="text-base font-bold">2. Feugiat in ante metus dictum.</p>
-                    <p class="text-base">Enim sed faucibus turpis in eu. At urna condimentum mattis pellentesque id. </p>
+                    <p class="text-base">Enim sed faucibus turpis in eu. At urna condimentum mattis pellentesque id.
+                    </p>
                   </div>
                 </div>
                 <div class="flex mt-4">
-                  <img class="mt-1 w-16 h-16 mr-4 pointer-events-none object-fit group-hover:opacity-75" src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/pelco-smart-compression-h265-h264-icon.png" alt="" >
+                  <img class="mt-1 w-16 h-16 mr-4 pointer-events-none object-fit group-hover:opacity-75"
+                    src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/pelco-smart-compression-h265-h264-icon.png"
+                    alt="">
                   <div>
                     <p class="text-base font-bold">3. Feugiat in ante metus dictum.</p>
-                    <p class="text-base">Enim sed faucibus turpis in eu. At urna condimentum mattis pellentesque id. </p>
+                    <p class="text-base">Enim sed faucibus turpis in eu. At urna condimentum mattis pellentesque id.
+                    </p>
                   </div>
                 </div>
                 <div class="mt-4">
                   <div class="inline-flex rounded-3xl shadow">
-                    <a href="#" class="inline-flex items-center justify-center rounded-3xl border border-transparent bg-primary px-6 py-3 text-base font-medium text-white hover:bg-secondary">
+                    <a href="#"
+                      class="inline-flex items-center justify-center rounded-3xl border border-transparent bg-primary px-6 py-3 text-base font-medium text-white hover:bg-secondary">
                       primary CTA
                       <!-- <svg class="-mr-1 ml-3 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                         <path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5z" clip-rule="evenodd" />
@@ -435,11 +533,11 @@
                     </a>
                   </div>
                 </div>
+              </div>
             </div>
-          </div>
 
+          </div>
         </div>
-      </div>
       </div>
     </div>
     <!-- 5. Image Content Grid -->
@@ -449,79 +547,105 @@
         <!-- Content goes here -->
         <div class="max-w-2xl mx-auto">
           <h2 class="text-4xl tracking-tight font-bold text-center mx-auto w-fit">Products Section</h2>
-          <p class="mt-4 text-base text-center mx-auto ">Eget mi proin sed libero enim. Lacus vel facilisis volutpat est velit egestas dui id. Ut pharetra sit amet aliquam id diam. Cras pulvinar mattis nunc sed blandit libero. </p>
+          <p class="mt-4 text-base text-center mx-auto ">Eget mi proin sed libero enim. Lacus vel facilisis volutpat est
+            velit egestas dui id. Ut pharetra sit amet aliquam id diam. Cras pulvinar mattis nunc sed blandit libero.
+          </p>
         </div>
         <ul role="list" class="mt-8 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-12">
           <li class="relative">
             <div class="group aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-2xl shadow-lg">
-              <img src="https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80" alt="" class="pointer-events-none object-cover group-hover:opacity-75">
+              <img
+                src="https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80"
+                alt="" class="pointer-events-none object-cover group-hover:opacity-75">
               <!-- <button type="button" class="absolute inset-0 focus:outline-none">
                 <span class="sr-only">View details for IMG_4985.HEIC</span>
               </button> -->
             </div>
             <div class="">
-              <h6 class="mt-4 text-center pointer-events-none block truncate text-lg font-bold text-gray-900">Nec ullamcorper sit nullam eget</h6>
-              <p class="mt-2 text-center pointer-events-none block text-base font-medium text-gray-500">Iaculis nunc sed augue lacus viverra vitae congue. Vitae tempus quam pellentesque nec nam. Habitasse platea dictumst.</p>
+              <h6 class="mt-4 text-center pointer-events-none block truncate text-lg font-bold text-gray-900">Nec
+                ullamcorper sit nullam eget</h6>
+              <p class="mt-2 text-center pointer-events-none block text-base font-medium text-gray-500">Iaculis nunc sed
+                augue lacus viverra vitae congue. Vitae tempus quam pellentesque nec nam. Habitasse platea dictumst.</p>
             </div>
           </li>
           <li class="relative">
             <div class="group aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-2xl shadow-lg">
-              <img src="https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80" alt="" class="pointer-events-none object-cover group-hover:opacity-75">
+              <img
+                src="https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80"
+                alt="" class="pointer-events-none object-cover group-hover:opacity-75">
               <!-- <button type="button" class="absolute inset-0 focus:outline-none">
                 <span class="sr-only">View details for IMG_4985.HEIC</span>
               </button> -->
             </div>
             <div class="">
-              <h6 class="mt-4 text-center pointer-events-none block truncate text-lg font-bold text-gray-900">Nec ullamcorper sit nullam eget</h6>
-              <p class="mt-2 text-center pointer-events-none block text-base font-medium text-gray-500">Iaculis nunc sed augue lacus viverra vitae congue. Vitae tempus quam pellentesque nec nam. Habitasse platea dictumst.</p>
+              <h6 class="mt-4 text-center pointer-events-none block truncate text-lg font-bold text-gray-900">Nec
+                ullamcorper sit nullam eget</h6>
+              <p class="mt-2 text-center pointer-events-none block text-base font-medium text-gray-500">Iaculis nunc sed
+                augue lacus viverra vitae congue. Vitae tempus quam pellentesque nec nam. Habitasse platea dictumst.</p>
             </div>
           </li>
           <li class="relative">
             <div class="group aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-2xl shadow-lg">
-              <img src="https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80" alt="" class="pointer-events-none object-cover group-hover:opacity-75">
+              <img
+                src="https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80"
+                alt="" class="pointer-events-none object-cover group-hover:opacity-75">
               <!-- <button type="button" class="absolute inset-0 focus:outline-none">
                 <span class="sr-only">View details for IMG_4985.HEIC</span>
               </button> -->
             </div>
             <div class="">
-              <h6 class="mt-4 text-center pointer-events-none block truncate text-lg font-bold text-gray-900">Nec ullamcorper sit nullam eget</h6>
-              <p class="mt-2 text-center pointer-events-none block text-base font-medium text-gray-500">Iaculis nunc sed augue lacus viverra vitae congue. Vitae tempus quam pellentesque nec nam. Habitasse platea dictumst.</p>
+              <h6 class="mt-4 text-center pointer-events-none block truncate text-lg font-bold text-gray-900">Nec
+                ullamcorper sit nullam eget</h6>
+              <p class="mt-2 text-center pointer-events-none block text-base font-medium text-gray-500">Iaculis nunc sed
+                augue lacus viverra vitae congue. Vitae tempus quam pellentesque nec nam. Habitasse platea dictumst.</p>
             </div>
           </li>
           <li class="relative">
             <div class="group aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-2xl shadow-lg">
-              <img src="https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80" alt="" class="pointer-events-none object-cover group-hover:opacity-75">
+              <img
+                src="https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80"
+                alt="" class="pointer-events-none object-cover group-hover:opacity-75">
               <!-- <button type="button" class="absolute inset-0 focus:outline-none">
                 <span class="sr-only">View details for IMG_4985.HEIC</span>
               </button> -->
             </div>
             <div class="">
-              <h6 class="mt-4 text-center pointer-events-none block truncate text-lg font-bold text-gray-900">Nec ullamcorper sit nullam eget</h6>
-              <p class="mt-2 text-center pointer-events-none block text-base font-medium text-gray-500">Iaculis nunc sed augue lacus viverra vitae congue. Vitae tempus quam pellentesque nec nam. Habitasse platea dictumst.</p>
+              <h6 class="mt-4 text-center pointer-events-none block truncate text-lg font-bold text-gray-900">Nec
+                ullamcorper sit nullam eget</h6>
+              <p class="mt-2 text-center pointer-events-none block text-base font-medium text-gray-500">Iaculis nunc sed
+                augue lacus viverra vitae congue. Vitae tempus quam pellentesque nec nam. Habitasse platea dictumst.</p>
             </div>
           </li>
           <li class="relative">
             <div class="group aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-2xl shadow-lg">
-              <img src="https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80" alt="" class="pointer-events-none object-cover group-hover:opacity-75">
+              <img
+                src="https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80"
+                alt="" class="pointer-events-none object-cover group-hover:opacity-75">
               <!-- <button type="button" class="absolute inset-0 focus:outline-none">
                 <span class="sr-only">View details for IMG_4985.HEIC</span>
               </button> -->
             </div>
             <div class="">
-              <h6 class="mt-4 text-center pointer-events-none block truncate text-lg font-bold text-gray-900">Nec ullamcorper sit nullam eget</h6>
-              <p class="mt-2 text-center pointer-events-none block text-base font-medium text-gray-500">Iaculis nunc sed augue lacus viverra vitae congue. Vitae tempus quam pellentesque nec nam. Habitasse platea dictumst.</p>
+              <h6 class="mt-4 text-center pointer-events-none block truncate text-lg font-bold text-gray-900">Nec
+                ullamcorper sit nullam eget</h6>
+              <p class="mt-2 text-center pointer-events-none block text-base font-medium text-gray-500">Iaculis nunc sed
+                augue lacus viverra vitae congue. Vitae tempus quam pellentesque nec nam. Habitasse platea dictumst.</p>
             </div>
           </li>
           <li class="relative">
             <div class="group aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-2xl shadow-lg">
-              <img src="https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80" alt="" class="pointer-events-none object-cover group-hover:opacity-75">
+              <img
+                src="https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80"
+                alt="" class="pointer-events-none object-cover group-hover:opacity-75">
               <!-- <button type="button" class="absolute inset-0 focus:outline-none">
                 <span class="sr-only">View details for IMG_4985.HEIC</span>
               </button> -->
             </div>
             <div class="">
-              <h6 class="mt-4 text-center pointer-events-none block truncate text-lg font-bold text-gray-900">Nec ullamcorper sit nullam eget</h6>
-              <p class="mt-2 text-center pointer-events-none block text-base font-medium text-gray-500">Iaculis nunc sed augue lacus viverra vitae congue. Vitae tempus quam pellentesque nec nam. Habitasse platea dictumst.</p>
+              <h6 class="mt-4 text-center pointer-events-none block truncate text-lg font-bold text-gray-900">Nec
+                ullamcorper sit nullam eget</h6>
+              <p class="mt-2 text-center pointer-events-none block text-base font-medium text-gray-500">Iaculis nunc sed
+                augue lacus viverra vitae congue. Vitae tempus quam pellentesque nec nam. Habitasse platea dictumst.</p>
             </div>
           </li>
 
@@ -538,13 +662,16 @@
             <div class="mx-auto max-w-6xl py-8 px-8 z-10 h-full flex items-center">
               <div class="max-w-3xl">
                 <span class="text-lg text-primary font-bold block">Feugiat vivamus at augue</span>
-                <h2 class="mt-2 text-4xl font-bold tracking-tight block text-white">Habitant morbi tristique senectus et netus et malesuada fames. </h2>
+                <h2 class="mt-2 text-4xl font-bold tracking-tight block text-white">Habitant morbi tristique senectus et
+                  netus et malesuada fames. </h2>
                 <div class="mt-8 flex">
-                <div class="inline-flex rounded-2xl shadow">
-                  <a href="#" class="inline-flex items-center justify-center rounded-3xl border border-transparent bg-primary px-5 py-3 text-base font-medium text-white hover:bg-secondary">primary button</a>
-                </div>
+                  <div class="inline-flex rounded-2xl shadow">
+                    <a href="#"
+                      class="inline-flex items-center justify-center rounded-3xl border border-transparent bg-primary px-5 py-3 text-base font-medium text-white hover:bg-secondary">primary
+                      button</a>
+                  </div>
 
-              </div>
+                </div>
               </div>
 
 
@@ -564,7 +691,8 @@
               </div> -->
             </div>
             <div class="hidden lg:block lg:col-span-2">
-              <img src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/banner-right.jpg" alt="" class="w-full min-h-96 object-cover pointer-events-none group-hover:opacity-75">
+              <img src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/banner-right.jpg"
+                alt="" class="w-full min-h-96 object-cover pointer-events-none group-hover:opacity-75">
             </div>
           </div>
 
@@ -578,56 +706,73 @@
         <!-- Content goes here -->
         <div class="py-8">
           <h3 class="text-center text-2xl font-bold">Compliance & Certifications</h3>
-          <p class="mt-4 text-center text-base">Iaculis nunc sed augue lacus viverra vitae congue. Vitae tempus quam pellentesque nec nam.</p>
+          <p class="mt-4 text-center text-base">Iaculis nunc sed augue lacus viverra vitae congue. Vitae tempus quam
+            pellentesque nec nam.</p>
         </div>
         <ul role="list" class="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8">
           <li class="relative rounded-2xl bg-gray-100 shadow-lg p-4">
             <div class="group aspect-w-10 aspect-h-10 block w-full overflow-hidden rounded-2xl">
-              <img src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/fips-201-2-icon.png" alt="" class="pointer-events-none h-fit object-fit group-hover:opacity-75">
+              <img
+                src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/fips-201-2-icon.png"
+                alt="" class="pointer-events-none h-fit object-fit group-hover:opacity-75">
 
 
               <!-- <button type="button" class="absolute inset-0 focus:outline-none">
                 <span class="sr-only">View details for IMG_4985.HEIC</span>
               </button> -->
             </div>
-            <p class="text-center pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">Erat velit scelerisque</p>
-            <p class="text-center mt-2 pointer-events-none block text-sm font-medium text-gray-500">Auctor elit sed vulputate mi sit amet mauris diam scelerisque fermentum dui.</p>
+            <p class="text-center pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">Erat velit
+              scelerisque</p>
+            <p class="text-center mt-2 pointer-events-none block text-sm font-medium text-gray-500">Auctor elit sed
+              vulputate mi sit amet mauris diam scelerisque fermentum dui.</p>
           </li>
           <li class="relative rounded-2xl bg-gray-100 shadow-lg p-4">
             <div class="group aspect-w-10 aspect-h-10 block w-full overflow-hidden rounded-2xl">
-              <img src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/fips-201-2-icon.png" alt="" class="pointer-events-none h-fit object-fit group-hover:opacity-75">
+              <img
+                src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/fips-201-2-icon.png"
+                alt="" class="pointer-events-none h-fit object-fit group-hover:opacity-75">
 
 
               <!-- <button type="button" class="absolute inset-0 focus:outline-none">
                 <span class="sr-only">View details for IMG_4985.HEIC</span>
               </button> -->
             </div>
-            <p class="text-center pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">Erat velit scelerisque</p>
-            <p class="text-center mt-2 pointer-events-none block text-sm font-medium text-gray-500">Auctor elit sed vulputate mi sit amet mauris diam scelerisque fermentum dui.</p>
+            <p class="text-center pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">Erat velit
+              scelerisque</p>
+            <p class="text-center mt-2 pointer-events-none block text-sm font-medium text-gray-500">Auctor elit sed
+              vulputate mi sit amet mauris diam scelerisque fermentum dui.</p>
           </li>
           <li class="relative rounded-2xl bg-gray-100 shadow-lg p-4">
             <div class="group aspect-w-10 aspect-h-10 block w-full overflow-hidden rounded-2xl">
-              <img src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/fips-201-2-icon.png" alt="" class="pointer-events-none h-fit object-fit group-hover:opacity-75">
+              <img
+                src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/fips-201-2-icon.png"
+                alt="" class="pointer-events-none h-fit object-fit group-hover:opacity-75">
 
 
               <!-- <button type="button" class="absolute inset-0 focus:outline-none">
                 <span class="sr-only">View details for IMG_4985.HEIC</span>
               </button> -->
             </div>
-            <p class="text-center pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">Erat velit scelerisque</p>
-            <p class="text-center mt-2 pointer-events-none block text-sm font-medium text-gray-500">Auctor elit sed vulputate mi sit amet mauris diam scelerisque fermentum dui.</p>
+            <p class="text-center pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">Erat velit
+              scelerisque</p>
+            <p class="text-center mt-2 pointer-events-none block text-sm font-medium text-gray-500">Auctor elit sed
+              vulputate mi sit amet mauris diam scelerisque fermentum dui.</p>
           </li>
           <li class="relative rounded-2xl bg-gray-100 shadow-lg p-4">
             <div class="group aspect-w-10 aspect-h-10 block w-full overflow-hidden rounded-2xl">
-              <img src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/fips-201-2-icon.png" alt="" class="pointer-events-none h-fit object-fit group-hover:opacity-75">
+              <img
+                src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/fips-201-2-icon.png"
+                alt="" class="pointer-events-none h-fit object-fit group-hover:opacity-75">
 
 
               <!-- <button type="button" class="absolute inset-0 focus:outline-none">
                 <span class="sr-only">View details for IMG_4985.HEIC</span>
               </button> -->
             </div>
-            <p class="text-center pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">Erat velit scelerisque</p>
-            <p class="text-center mt-2 pointer-events-none block text-sm font-medium text-gray-500">Auctor elit sed vulputate mi sit amet mauris diam scelerisque fermentum dui.</p>
+            <p class="text-center pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">Erat velit
+              scelerisque</p>
+            <p class="text-center mt-2 pointer-events-none block text-sm font-medium text-gray-500">Auctor elit sed
+              vulputate mi sit amet mauris diam scelerisque fermentum dui.</p>
           </li>
 
         </ul>
@@ -635,243 +780,265 @@
     </div>
 
 
-  <!-- Footer -->
-  <footer class="bg-black mt-8" aria-labelledby="footer-heading">
-    <h2 id="footer-heading" class="sr-only">Footer</h2>
-    <div class="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-      <div class="xl:grid xl:grid-cols-2 xl:gap-8 text-white">
-        <div class="grid grid-cols-2 gap-8 xl:col-span-2 ">
-          <div class="md:grid md:grid-cols-2 md:gap-4 ">
-            <div class="">
-              <h3 class="text-base font-medium ">Products</h3>
-              <ul role="list" class="mt-3 space-y-1">
-                <li>
-                  <a href="https://www.pelco.com/products/video-management-solution-videoxpert/videoxpert-enterprise/"
-                    class="text-sm  hover:text-primary">VideoXpert Enterprise</a>
-                </li>
+    <!-- Footer -->
+    <footer class="bg-black mt-8" aria-labelledby="footer-heading">
+      <h2 id="footer-heading" class="sr-only">Footer</h2>
+      <div class="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+        <div class="xl:grid xl:grid-cols-2 xl:gap-8 text-white">
+          <div class="grid grid-cols-2 gap-8 xl:col-span-2 ">
+            <div class="md:grid md:grid-cols-2 md:gap-4 ">
+              <div class="">
+                <h3 class="text-base font-medium ">Products</h3>
+                <ul role="list" class="mt-3 space-y-1">
+                  <li>
+                    <a href="https://www.pelco.com/products/video-management-solution-videoxpert/videoxpert-enterprise/"
+                      class="text-sm  hover:text-primary">VideoXpert Enterprise</a>
+                  </li>
 
-                <li>
-                  <a href="https://www.pelco.com/products/video-management-solution-videoxpert/vxpro/"
-                    class="text-sm hover:text-primary">VideoXpert Professional</a>
-                </li>
+                  <li>
+                    <a href="https://www.pelco.com/products/video-management-solution-videoxpert/vxpro/"
+                      class="text-sm hover:text-primary">VideoXpert Professional</a>
+                  </li>
 
-                <li>
-                  <a href="https://www.pelco.com/products/videoxpert-plates/"
-                    class="text-sm hover:text-primary">VideoXpert Plates</a>
-                </li>
-                <li>
-                  <a href="https://www.pelco.com/products/cameras/" class="text-sm  hover:text-primary">Cameras</a>
-                </li>
-                <li>
-                  <a href="https://www.pelco.com/products/accessories/"
-                    class="text-sm  hover:text-primary">Accessories</a>
-                </li>
-                <li>
-                  <a href="https://www.pelco.com/products/special-modification-requests/"
-                    class="text-sm  hover:text-primary">Special Modification Requests</a>
-                </li>
+                  <li>
+                    <a href="https://www.pelco.com/products/videoxpert-plates/"
+                      class="text-sm hover:text-primary">VideoXpert Plates</a>
+                  </li>
+                  <li>
+                    <a href="https://www.pelco.com/products/cameras/" class="text-sm  hover:text-primary">Cameras</a>
+                  </li>
+                  <li>
+                    <a href="https://www.pelco.com/products/accessories/"
+                      class="text-sm  hover:text-primary">Accessories</a>
+                  </li>
+                  <li>
+                    <a href="https://www.pelco.com/products/special-modification-requests/"
+                      class="text-sm  hover:text-primary">Special Modification Requests</a>
+                  </li>
 
-                <!-- <li>
+                  <!-- <li>
                 <a href="#" class="text-sm  hover:text-primary">Insights</a>
               </li> -->
-              </ul>
+                </ul>
 
-              <h3 class="mt-4 text-base font-medium ">Legacy</h3>
-              <ul role="list" class="mt-3 space-y-1">
-                <li>
-                  <a href="https://www.pelco.com/products/video-management-solution-videoxpert/endura/"
-                    class="text-sm  hover:text-primary">Endura</a>
-                </li>
-                <li>
-                  <a href="https://www.pelco.com/products/video-management-solution-videoxpert/video-mangement-solutions-digital-sentry-flexible-video-management/"
-                    class="text-sm  hover:text-primary">Digital Sentry</a>
-                </li>
+                <h3 class="mt-4 text-base font-medium ">Legacy</h3>
+                <ul role="list" class="mt-3 space-y-1">
+                  <li>
+                    <a href="https://www.pelco.com/products/video-management-solution-videoxpert/endura/"
+                      class="text-sm  hover:text-primary">Endura</a>
+                  </li>
+                  <li>
+                    <a href="https://www.pelco.com/products/video-management-solution-videoxpert/video-mangement-solutions-digital-sentry-flexible-video-management/"
+                      class="text-sm  hover:text-primary">Digital Sentry</a>
+                  </li>
 
-                <!-- <li>
+                  <!-- <li>
                 <a href="#" class="text-sm  hover:text-primary">Insights</a>
               </li> -->
-              </ul>
+                </ul>
+              </div>
+              <div class="mt-12 md:mt-0">
+                <h3 class="text-base font-medium ">Solutions</h3>
+                <ul role="list" class="mt-3 space-y-1">
+                  <li>
+                    <a href="https://www.pelco.com/solutions/#explore"
+                      class="text-sm  hover:text-primary">Industries</a>
+                  </li>
+
+                  <li>
+                    <a href="https://www.pelco.com/solutions/capabilities/"
+                      class="text-sm  hover:text-primary">Capabilities</a>
+                  </li>
+
+                </ul>
+
+                <h3 class="mt-4 text-base font-medium ">Professional Services</h3>
+                <ul role="list" class="mt-3 space-y-1">
+                  <li>
+                    <a href="https://www.pelco.com/professional-services/field-services/"
+                      class="text-sm hover:text-primary">Field/Remote Services</a>
+                  </li>
+
+                  <li>
+                    <a href="https://www.pelco.com/professional-services/training-services/"
+                      class="text-sm  hover:text-primary">Training Services</a>
+                  </li>
+                </ul>
+
+                <h3 class="mt-4 text-base font-medium ">Training & Support</h3>
+                <ul role="list" class="mt-3 space-y-1">
+                  <li>
+                    <a href="https://www.pelco.com/training-support/repair/return-merchandise-authorization/"
+                      class="text-sm  hover:text-primary">Return Merchandise Authorization</a>
+                  </li>
+
+                  <li>
+                    <a href="https://www.pelco.com/training-support/information/quality/"
+                      class="text-sm  hover:text-primary">Quality</a>
+                  </li>
+
+                </ul>
+              </div>
             </div>
-            <div class="mt-12 md:mt-0">
-              <h3 class="text-base font-medium ">Solutions</h3>
-              <ul role="list" class="mt-3 space-y-1">
-                <li>
-                  <a href="https://www.pelco.com/solutions/#explore" class="text-sm  hover:text-primary">Industries</a>
-                </li>
+            <div class="md:grid md:grid-cols-2 md:gap-4">
+              <div>
+                <h3 class="text-base font-medium ">Partners</h3>
+                <ul role="list" class="mt-3 space-y-1">
+                  <li>
+                    <a href="https://www.pelco.com/partners/global-distribution-partners/"
+                      class="text-sm  hover:text-primary">Global Distribution Partners</a>
+                  </li>
 
-                <li>
-                  <a href="https://www.pelco.com/solutions/capabilities/"
-                    class="text-sm  hover:text-primary">Capabilities</a>
-                </li>
+                  <li>
+                    <a href="https://www.pelco.com/partners/technical-partners/"
+                      class="text-sm  hover:text-primary">Technology Partner Program – Partner First</a>
+                  </li>
+                </ul>
 
-              </ul>
+                <h3 class="mt-4 text-base font-medium ">Resources</h3>
+                <ul role="list" class="mt-3 space-y-1">
+                  <li>
+                    <a href="https://www.pelco.com/pelco-blog/" class="text-sm  hover:text-primary">Pelco Blog</a>
+                  </li>
 
-              <h3 class="mt-4 text-base font-medium ">Professional Services</h3>
-              <ul role="list" class="mt-3 space-y-1">
-                <li>
-                  <a href="https://www.pelco.com/professional-services/field-services/"
-                    class="text-sm hover:text-primary">Field/Remote Services</a>
-                </li>
+                </ul>
 
-                <li>
-                  <a href="https://www.pelco.com/professional-services/training-services/"
-                    class="text-sm  hover:text-primary">Training Services</a>
-                </li>
-              </ul>
+                <h3 class="mt-4 text-base font-medium ">Legal</h3>
+                <ul role="list" class="mt-3 space-y-1">
+                  <li>
+                    <a href="https://www.pelco.com/about/legal/end-user-license-agreement-eula/"
+                      class="text-sm  hover:text-primary">End User License Agreement – Camera Firmware EULA</a>
+                  </li>
 
-              <h3 class="mt-4 text-base font-medium ">Training & Support</h3>
-              <ul role="list" class="mt-3 space-y-1">
-                <li>
-                  <a href="https://www.pelco.com/training-support/repair/return-merchandise-authorization/"
-                    class="text-sm  hover:text-primary">Return Merchandise Authorization</a>
-                </li>
+                  <li>
+                    <a href="https://www.pelco.com/about/legal/pelco-communication-preference-center/"
+                      class="text-sm  hover:text-primary">Preference Center</a>
+                  </li>
 
-                <li>
-                  <a href="https://www.pelco.com/training-support/information/quality/"
-                    class="text-sm  hover:text-primary">Quality</a>
-                </li>
+                  <li>
+                    <a href="https://www.pelco.com/about/legal/regulatory-notices/"
+                      class="text-sm hover:text-primary">Regulatory Notices</a>
+                  </li>
 
-              </ul>
+                  <li>
+                    <a href="https://www.motorolasolutions.com/en_us/about/privacy-policy.html#californiaresidents"
+                      class="text-sm hover:text-primary">Do Not Sell My Personal Information</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="mt-12 md:mt-0">
+                <h3 class="text-base font-medium ">Pelco Corporations</h3>
+                <ul role="list" class="mt-3 space-y-1">
+                  <li>
+                    <p class="text-sm ">
+                      625 W. Alluvial,
+                      <br>
+                      Fresno, CA 93711
+                    </p>
+                  </li>
+
+                  <li>
+                    <a href="https://www.google.com/maps/place/Pelco,+Inc./@36.8441529,-119.8068543,17z/data=!3m1!4b1!4m5!3m4!1s0x80945c1703176863:0x63fa2cfb0e0ca855!8m2!3d36.8440493!4d-119.8044841"
+                      class="text-sm underline hover:text-primary">View Map</a>
+                  </li>
+                  <li>
+                    <a href="tel:+1-800-289-9100" class="text-sm underline hover:text-primary">+1 (800) 289-9100</a>
+                  </li>
+
+
+                </ul>
+
+                <h3 class="mt-4 text-base font-medium ">Follow Us</h3>
+                <ul role="list" class="mt-3 space-x-1 flex flex-row">
+                  <a href="https://www.facebook.com/pelcovideo" class="text-primary hover:text-secondary pr-2"
+                    target="_blank">
+                    <span class="sr-only">Facebook</span>
+                    <svg class="h-8 w-8" version="1.1" viewBox="0 0 60 60">
+                      <g fill="#00729D" fill-rule="evenodd" id="black" stroke="none" stroke-width="1"
+                        aria-hidden="true">
+                        <g id="facebook">
+                          <path
+                            d="M30,60 C46.5685433,60 60,46.5685433 60,30 C60,13.4314567 46.5685433,0 30,0 C13.4314567,0 0,13.4314567 0,30 C0,46.5685433 13.4314567,60 30,60 Z"
+                            fill="#00729D" id="Facebook" />
+                          <path
+                            d="M25.4622239,47.314313 L25.4622239,29.9989613 L21.9432889,29.9989612 L21.9432889,24.2593563 L25.4622239,24.2593563 L25.4622239,20.7883864 C25.4622239,16.1066422 26.8619948,12.730619 31.9881023,12.730619 L38.0863595,12.730619 L38.0863595,18.45844 L33.7922546,18.45844 C31.6418944,18.45844 31.1518737,19.8873763 31.1518737,21.3837609 L31.1518737,24.2593553 L37.7694231,24.2593558 L36.8661728,29.9989613 L31.1518737,29.9989613 L31.1518737,47.3143123 L25.4622239,47.314313 Z"
+                            fill="#FFFFFF" />
+                        </g>
+                      </g>
+                    </svg>
+                  </a>
+
+                  <a href="https://www.youtube.com/pelcovideo" class="text-primary hover:text-secondary pr-2"
+                    target="_blank">
+                    <span class="sr-only">Youtube</span>
+                    <svg id="youtube" class="h-8 w-8" viewBox="0 0 1000 1000">
+                      <g>
+                        <path fill="#00729D"
+                          d="M500,1000L500,1000C223.9,1000,0,776.1,0,500v0C0,223.9,223.9,0,500,0h0c276.1,0,500,223.9,500,500v0C1000,776.1,776.1,1000,500,1000z" />
+                        <path fill="#FFFFFF"
+                          d="M818.2,339.1c-7.6-28.8-30.1-51.4-58.7-59.1c-51.8-14-259.4-14-259.4-14s-207.7,0-259.4,14c-28.6,7.7-51.1,30.3-58.7,59.1C168,391.2,168,500,168,500s0,108.8,13.9,160.9c7.6,28.8,30.1,51.4,58.7,59.1c51.8,14,259.4,14,259.4,14s207.7,0,259.4-14c28.6-7.7,51.1-30.3,58.7-59.1C832,608.8,832,500,832,500S832,391.2,818.2,339.1zM432.1,598.7V401.3L605.6,500L432.1,598.7z" />
+                      </g>
+                    </svg>
+                  </a>
+
+                  <a href="https://twitter.com/pelcovideo" class="text-primary hover:text-secondary pr-2"
+                    target="_blank">
+                    <span class="sr-only">Twitter</span>
+                    <svg id="twitter" class="h-8 w-8" viewBox="0 0 48 48">
+                      <circle cx="24" cy="24" fill="#00729D" r="24" />
+                      <g>
+                        <g>
+                          <path
+                            d="M36.8,15.4c-0.9,0.5-2,0.8-3,0.9c1.1-0.7,1.9-1.8,2.3-3.1c-1,0.6-2.1,1.1-3.4,1.4c-1-1.1-2.3-1.8-3.8-1.8c-2.9,0-5.3,2.5-5.3,5.7c0,0.4,0,0.9,0.1,1.3c-4.4-0.2-8.3-2.5-10.9-5.9c-0.5,0.8-0.7,1.8-0.7,2.9c0,2,0.9,3.7,2.3,4.7c-0.9,0-1.7-0.3-2.4-0.7c0,0,0,0.1,0,0.1c0,2.7,1.8,5,4.2,5.6c-0.4,0.1-0.9,0.2-1.4,0.2c-0.3,0-0.7,0-1-0.1c0.7,2.3,2.6,3.9,4.9,3.9c-1.8,1.5-4.1,2.4-6.5,2.4c-0.4,0-0.8,0-1.3-0.1c2.3,1.6,5.1,2.6,8.1,2.6c9.7,0,15-8.6,15-16.1c0-0.2,0-0.5,0-0.7C35.2,17.6,36.1,16.6,36.8,15.4z"
+                            fill="#FFFFFF" />
+                        </g>
+                      </g>
+                    </svg>
+                  </a>
+
+                  <a href="https://www.linkedin.com/company/pelco" class="text-primary hover:text-secondary pr-2"
+                    target="_blank">
+                    <span class="sr-only">LinkedIn</span>
+                    <svg class="h-8 w-8" id="Linkedin" viewBox="0 0 32 32">
+                      <g>
+                        <circle clip-rule="evenodd" cx="16" cy="16" fill="#00729D" fill-rule="evenodd" r="16" />
+                        <g>
+                          <rect fill="#FFFFFF" height="14" width="4" x="7" y="11" />
+                          <path
+                            d="M20.499,11c-2.791,0-3.271,1.018-3.499,2v-2h-4v14h4v-8c0-1.297,0.703-2,2-2c1.266,0,2,0.688,2,2v8h4v-7C25,14,24.479,11,20.499,11z"
+                            fill="#FFFFFF" />
+                          <circle cx="9" cy="8" fill="#FFFFFF" r="2" />
+                        </g>
+                      </g>
+                    </svg>
+                  </a>
+                </ul>
+              </div>
             </div>
           </div>
-          <div class="md:grid md:grid-cols-2 md:gap-4">
-            <div>
-              <h3 class="text-base font-medium ">Partners</h3>
-              <ul role="list" class="mt-3 space-y-1">
-                <li>
-                  <a href="https://www.pelco.com/partners/global-distribution-partners/"
-                    class="text-sm  hover:text-primary">Global Distribution Partners</a>
-                </li>
 
-                <li>
-                  <a href="https://www.pelco.com/partners/technical-partners/"
-                    class="text-sm  hover:text-primary">Technology Partner Program – Partner First</a>
-                </li>
-              </ul>
-
-              <h3 class="mt-4 text-base font-medium ">Resources</h3>
-              <ul role="list" class="mt-3 space-y-1">
-                <li>
-                  <a href="https://www.pelco.com/pelco-blog/" class="text-sm  hover:text-primary">Pelco Blog</a>
-                </li>
-
-              </ul>
-
-              <h3 class="mt-4 text-base font-medium ">Legal</h3>
-              <ul role="list" class="mt-3 space-y-1">
-                <li>
-                  <a href="https://www.pelco.com/about/legal/end-user-license-agreement-eula/"
-                    class="text-sm  hover:text-primary">End User License Agreement – Camera Firmware EULA</a>
-                </li>
-
-                <li>
-                  <a href="https://www.pelco.com/about/legal/pelco-communication-preference-center/"
-                    class="text-sm  hover:text-primary">Preference Center</a>
-                </li>
-
-                <li>
-                  <a href="https://www.pelco.com/about/legal/regulatory-notices/"
-                    class="text-sm hover:text-primary">Regulatory Notices</a>
-                </li>
-
-                <li>
-                  <a href="https://www.motorolasolutions.com/en_us/about/privacy-policy.html#californiaresidents"
-                    class="text-sm hover:text-primary">Do Not Sell My Personal Information</a>
-                </li>
-              </ul>
-            </div>
-            <div class="mt-12 md:mt-0">
-              <h3 class="text-base font-medium ">Pelco Corporations</h3>
-              <ul role="list" class="mt-3 space-y-1">
-                <li>
-                  <p class="text-sm ">
-                    625 W. Alluvial,
-                    <br>
-                    Fresno, CA 93711
-                  </p>
-                </li>
-
-                <li>
-                  <a href="https://www.google.com/maps/place/Pelco,+Inc./@36.8441529,-119.8068543,17z/data=!3m1!4b1!4m5!3m4!1s0x80945c1703176863:0x63fa2cfb0e0ca855!8m2!3d36.8440493!4d-119.8044841"
-                    class="text-sm underline hover:text-primary">View Map</a>
-                </li>
-                <li>
-                  <a href="tel:+1-800-289-9100" class="text-sm underline hover:text-primary">+1 (800) 289-9100</a>
-                </li>
-
-
-              </ul>
-
-              <h3 class="mt-4 text-base font-medium ">Follow Us</h3>
-              <ul role="list" class="mt-3 space-x-1 flex flex-row">
-                <a href="https://www.facebook.com/pelcovideo" class="text-primary hover:text-secondary pr-2" target="_blank">
-                  <span class="sr-only">Facebook</span>
-                  <svg class="h-8 w-8" version="1.1" viewBox="0 0 60 60">
-                    <g fill="#00729D" fill-rule="evenodd" id="black" stroke="none" stroke-width="1" aria-hidden="true">
-                      <g id="facebook">
-                        <path d="M30,60 C46.5685433,60 60,46.5685433 60,30 C60,13.4314567 46.5685433,0 30,0 C13.4314567,0 0,13.4314567 0,30 C0,46.5685433 13.4314567,60 30,60 Z" fill="#00729D" id="Facebook"/>
-                        <path d="M25.4622239,47.314313 L25.4622239,29.9989613 L21.9432889,29.9989612 L21.9432889,24.2593563 L25.4622239,24.2593563 L25.4622239,20.7883864 C25.4622239,16.1066422 26.8619948,12.730619 31.9881023,12.730619 L38.0863595,12.730619 L38.0863595,18.45844 L33.7922546,18.45844 C31.6418944,18.45844 31.1518737,19.8873763 31.1518737,21.3837609 L31.1518737,24.2593553 L37.7694231,24.2593558 L36.8661728,29.9989613 L31.1518737,29.9989613 L31.1518737,47.3143123 L25.4622239,47.314313 Z" fill="#FFFFFF"/>
-                      </g>
-                    </g>
-                  </svg>
-                </a>
-
-                <a href="https://www.youtube.com/pelcovideo" class="text-primary hover:text-secondary pr-2" target="_blank">
-                  <span class="sr-only">Youtube</span>
-                  <svg id="youtube" class="h-8 w-8" viewBox="0 0 1000 1000">
-                    <g>
-                      <path fill="#00729D" d="M500,1000L500,1000C223.9,1000,0,776.1,0,500v0C0,223.9,223.9,0,500,0h0c276.1,0,500,223.9,500,500v0C1000,776.1,776.1,1000,500,1000z"/>
-                      <path fill="#FFFFFF" d="M818.2,339.1c-7.6-28.8-30.1-51.4-58.7-59.1c-51.8-14-259.4-14-259.4-14s-207.7,0-259.4,14c-28.6,7.7-51.1,30.3-58.7,59.1C168,391.2,168,500,168,500s0,108.8,13.9,160.9c7.6,28.8,30.1,51.4,58.7,59.1c51.8,14,259.4,14,259.4,14s207.7,0,259.4-14c28.6-7.7,51.1-30.3,58.7-59.1C832,608.8,832,500,832,500S832,391.2,818.2,339.1zM432.1,598.7V401.3L605.6,500L432.1,598.7z"/>
-                    </g>
-                  </svg>
-                </a>
-
-                <a href="https://twitter.com/pelcovideo" class="text-primary hover:text-secondary pr-2" target="_blank">
-                  <span class="sr-only">Twitter</span>
-                  <svg id="twitter" class="h-8 w-8" viewBox="0 0 48 48">
-                    <circle cx="24" cy="24" fill="#00729D" r="24"/>
-                    <g>
-                      <g>
-                        <path d="M36.8,15.4c-0.9,0.5-2,0.8-3,0.9c1.1-0.7,1.9-1.8,2.3-3.1c-1,0.6-2.1,1.1-3.4,1.4c-1-1.1-2.3-1.8-3.8-1.8c-2.9,0-5.3,2.5-5.3,5.7c0,0.4,0,0.9,0.1,1.3c-4.4-0.2-8.3-2.5-10.9-5.9c-0.5,0.8-0.7,1.8-0.7,2.9c0,2,0.9,3.7,2.3,4.7c-0.9,0-1.7-0.3-2.4-0.7c0,0,0,0.1,0,0.1c0,2.7,1.8,5,4.2,5.6c-0.4,0.1-0.9,0.2-1.4,0.2c-0.3,0-0.7,0-1-0.1c0.7,2.3,2.6,3.9,4.9,3.9c-1.8,1.5-4.1,2.4-6.5,2.4c-0.4,0-0.8,0-1.3-0.1c2.3,1.6,5.1,2.6,8.1,2.6c9.7,0,15-8.6,15-16.1c0-0.2,0-0.5,0-0.7C35.2,17.6,36.1,16.6,36.8,15.4z" fill="#FFFFFF"/>
-                      </g>
-                    </g>
-                  </svg>
-                </a>
-
-                <a href="https://www.linkedin.com/company/pelco" class="text-primary hover:text-secondary pr-2" target="_blank">
-                  <span class="sr-only">LinkedIn</span>
-                  <svg class="h-8 w-8" id="Linkedin" viewBox="0 0 32 32">
-                    <g>
-                      <circle clip-rule="evenodd" cx="16" cy="16" fill="#00729D" fill-rule="evenodd" r="16"/>
-                      <g>
-                        <rect fill="#FFFFFF" height="14" width="4" x="7" y="11"/>
-                        <path d="M20.499,11c-2.791,0-3.271,1.018-3.499,2v-2h-4v14h4v-8c0-1.297,0.703-2,2-2c1.266,0,2,0.688,2,2v8h4v-7C25,14,24.479,11,20.499,11z" fill="#FFFFFF"/>
-                        <circle cx="9" cy="8" fill="#FFFFFF" r="2"/>
-                      </g>
-                    </g>
-                  </svg>
-                </a>
-              </ul>
-            </div>
+        </div>
+        <div class="mt-8 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between">
+          <div class="flex space-x-6 md:order-2">
+            <p class="mt-8 text-base text-white md:order-1 md:mt-0">Copyright&copy; 2022</p>
           </div>
-        </div>
+          <div>
+            <p class="mt-8 text-base text-white md:order-1 md:mt-0 underline">Privacy and Cookie Policy</p>
+            <p class="mt-8 text-base text-white md:order-1 md:mt-0 underline">Cookie Preferences</p>
+          </div>
 
+        </div>
       </div>
-      <div class="mt-8 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between">
-        <div class="flex space-x-6 md:order-2">
-          <p class="mt-8 text-base text-white md:order-1 md:mt-0">Copyright&copy; 2022</p>
-        </div>
-        <div>
-          <p class="mt-8 text-base text-white md:order-1 md:mt-0 underline">Privacy and Cookie Policy</p>
-          <p class="mt-8 text-base text-white md:order-1 md:mt-0 underline">Cookie Preferences</p>
-        </div>
+    </footer>
 
-      </div>
-    </div>
-  </footer>
+    <script src="" async defer></script>
+    <script defer>
+      const btn = document.querySelector("button#mobile-burger-button");
+      const menu = document.querySelector("#mobile-menu");
 
-  <script src="" async defer></script>
-</body>
-
-
+      btn.addEventListener("click", () => {
+        menu?.classList.toggle("hidden");
+      });
+    </script>
+  </body>
 </html>
