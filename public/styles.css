@@ -576,6 +576,10 @@ select {
   outline: 1px auto -webkit-focus-ring-color;
 }
 
+html {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
