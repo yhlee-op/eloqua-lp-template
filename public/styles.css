@@ -1564,6 +1564,14 @@ html {
     padding-right: 2.5rem;
   }
 
+  .sm\:pt-8 {
+    padding-top: 2rem;
+  }
+
+  .sm\:pb-12 {
+    padding-bottom: 3rem;
+  }
+
   .sm\:text-center {
     text-align: center;
   }
@@ -1750,6 +1758,14 @@ html {
 
   .lg\:pl-10 {
     padding-left: 2.5rem;
+  }
+
+  .lg\:pt-12 {
+    padding-top: 3rem;
+  }
+
+  .lg\:pb-16 {
+    padding-bottom: 4rem;
   }
 
   .lg\:text-left {
