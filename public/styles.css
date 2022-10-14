@@ -871,6 +871,10 @@ html {
   max-height: 36rem;
 }
 
+.max-h-120 {
+  max-height: 30rem;
+}
+
 .min-h-96 {
   min-height: 24rem;
 }
