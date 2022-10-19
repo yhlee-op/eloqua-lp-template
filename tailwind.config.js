@@ -11,7 +11,7 @@ module.exports = {
     },
     backgroundImage: {
       'marquee-desktop': "url('https://images.ctfassets.net/7aadcbvnq1uv/17qqlmR3hk480mixv00fXA/2d7d8aa2e2a84902a45b060b0e685a85/cloud-sec-header.jpg?h=400&w=2200')",
-      'marquee-mobile': "url('https://images.ctfassets.net/7aadcbvnq1uv/7cl2xeHmZ4J2TAuty4iPYy/0313e2539f8156c9722d230519218ccc/cloud-sec-header-mobile.jpg?')"
+      'marquee-mobile': "url('https://images.ctfassets.net/7aadcbvnq1uv/7cl2xeHmZ4J2TAuty4iPYy/0313e2539f8156c9722d230519218ccc/cloud-sec-header-mobile.jpg')"
     },
     extend: {
       colors: {

@@ -1139,13 +1139,8 @@ html {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-white\/80 {
-  background-color: rgb(255 255 255 / 0.8);
-}
-
-.bg-gray-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+.bg-white\/70 {
+  background-color: rgb(255 255 255 / 0.7);
 }
 
 .bg-gray-100 {
@@ -1169,7 +1164,7 @@ html {
 }
 
 .bg-marquee-mobile {
-  background-image: url('https://images.ctfassets.net/7aadcbvnq1uv/7cl2xeHmZ4J2TAuty4iPYy/0313e2539f8156c9722d230519218ccc/cloud-sec-header-mobile.jpg?');
+  background-image: url('https://images.ctfassets.net/7aadcbvnq1uv/7cl2xeHmZ4J2TAuty4iPYy/0313e2539f8156c9722d230519218ccc/cloud-sec-header-mobile.jpg');
 }
 
 .bg-cover {
@@ -1618,6 +1613,10 @@ html {
     padding-right: 2.5rem;
   }
 
+  .sm\:pb-60 {
+    padding-bottom: 15rem;
+  }
+
   .sm\:pb-8 {
     padding-bottom: 2rem;
   }
@@ -1720,8 +1719,8 @@ html {
     background-image: url('https://images.ctfassets.net/7aadcbvnq1uv/17qqlmR3hk480mixv00fXA/2d7d8aa2e2a84902a45b060b0e685a85/cloud-sec-header.jpg?h=400&w=2200');
   }
 
-  .md\:pb-24 {
-    padding-bottom: 6rem;
+  .md\:pb-4 {
+    padding-bottom: 1rem;
   }
 }
 
