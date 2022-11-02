@@ -1146,6 +1146,10 @@ html {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-opacity-50 {
+  --tw-bg-opacity: 0.5;
+}
+
 .bg-marquee-mobile {
   background-image: url('https://images.ctfassets.net/7aadcbvnq1uv/7cl2xeHmZ4J2TAuty4iPYy/0313e2539f8156c9722d230519218ccc/cloud-sec-header-mobile.jpg');
 }
@@ -1220,9 +1224,9 @@ html {
   padding-right: 1.5rem;
 }
 
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .px-8 {
@@ -1238,11 +1242,6 @@ html {
 .py-48 {
   padding-top: 12rem;
   padding-bottom: 12rem;
-}
-
-.py-12 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
 }
 
 .pt-1 {
@@ -1346,6 +1345,10 @@ html {
 
 .font-semibold {
   font-weight: 600;
+}
+
+.font-extrabold {
+  font-weight: 800;
 }
 
 .tracking-tight {
@@ -1755,6 +1758,10 @@ html {
 
   .lg\:pl-10 {
     padding-left: 2.5rem;
+  }
+
+  .lg\:pr-4 {
+    padding-right: 1rem;
   }
 
   .lg\:text-left {
