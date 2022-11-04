@@ -722,6 +722,11 @@ html {
   --tw-aspect-h: 7;
 }
 
+.bgGradient-mobile {
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 40%, rgba(255,255,255,0) 100%);
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -854,13 +859,13 @@ html {
   height: 2rem;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .h-max {
   height: -moz-max-content;
   height: max-content;
-}
-
-.h-full {
-  height: 100%;
 }
 
 .h-64 {
@@ -1143,10 +1148,6 @@ html {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-white\/70 {
-  background-color: rgb(255 255 255 / 0.7);
-}
-
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
@@ -1167,7 +1168,7 @@ html {
 }
 
 .bg-marquee-mobile {
-  background-image: url('https://images.ctfassets.net/7aadcbvnq1uv/7cl2xeHmZ4J2TAuty4iPYy/0313e2539f8156c9722d230519218ccc/cloud-sec-header-mobile.jpg');
+  background-image: url('https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/01-SarixEnhanced3-Family-Header-mobile.jpg');
 }
 
 .bg-cover {
@@ -1516,6 +1517,11 @@ html {
 }
 
 @media (min-width: 480px) {
+  .sm\:bgGradient-desktop {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 680px, rgba(255,255,255,0) 100%);
+  }
+
   .sm\:col-span-1 {
     grid-column: span 1 / span 1;
   }
@@ -1585,6 +1591,10 @@ html {
     overflow: hidden;
   }
 
+  .sm\:bg-marquee-desktop {
+    background-image: url('https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/01-SarixEnhanced3-Family-Header%20(1).jpg');
+  }
+
   .sm\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -1600,8 +1610,8 @@ html {
     padding-right: 2.5rem;
   }
 
-  .sm\:pb-60 {
-    padding-bottom: 15rem;
+  .sm\:pb-4 {
+    padding-bottom: 1rem;
   }
 
   .sm\:pb-8 {
@@ -1680,14 +1690,6 @@ html {
   .md\:gap-x-12 {
     -moz-column-gap: 3rem;
          column-gap: 3rem;
-  }
-
-  .md\:bg-marquee-desktop {
-    background-image: url('https://images.ctfassets.net/7aadcbvnq1uv/17qqlmR3hk480mixv00fXA/2d7d8aa2e2a84902a45b060b0e685a85/cloud-sec-header.jpg?h=400&w=2200');
-  }
-
-  .md\:pb-4 {
-    padding-bottom: 1rem;
   }
 }
 
