@@ -27,7 +27,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
-  <link rel="stylesheet" href="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/pelco-lp-css-v6.css">
+  <link rel="stylesheet" href="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/pelco-lp-css-v7.css">
   <!-- <link rel="stylesheet" href="./public/styles.css"> -->
 
 </head>
@@ -60,6 +60,7 @@
 
           </div>
           <div class="hidden sm:ml-6 sm:flex sm:items-center">
+            <!-- Desktop Nav -->
             <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
               <!-- Current: "border-indigo-500 text-white", Default: "border-transparent text-white hover:border-white hover:text-gray-700" -->
               <a href="https://www.pelco.com/products/?elqTrackId=bc536a997b794177a5dbeb4d5ecaf50d" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white hover:border-white">Products</a>
@@ -103,16 +104,24 @@
   <div class="bg-white">
     <!-- 1. Header Hero -->
     <!-- Be sure to use this with a layout container that is full-width on mobile -->
-    <div class="bg-cover bg-center bg-marquee-mobile sm:bg-marquee-desktop">
-      <div class="w-full h-full bgGradient-mobile sm:bgGradient-desktop">
-        <div class="pt-4 w-full h-max pb-48 sm:pb-4">
-          <div class="px-4 sm:px-6 max-h-144 md:max-h-100">
+    <div class="bg-cover bg-center bg-marquee-mobile md:bg-marquee-desktop">
+      <div class="w-full h-full bgGradient-mobile md:bgGradient-desktop">
+        <div class="pt-4 w-full h-max pb-48 md:pb-4">
+          <div class="px-4 md:px-6 max-h-144 md:max-h-100">
             <!-- Content goes here -->
             <div class="mx-auto max-w-7xl py-4 px-4 sm:px-6 lg:py-16 lg:px-8">
-              <h1 class="text-tertiary text-4xl font-bold max-w-2xl">POWERFUL. PROTECTED. 
-                <span class="text-primary">PELCO.</span>
+              <!-- H1 -->
+              <h1 class="text-tertiary text-4xl font-bold max-w-2xl md:max-w-[45%]">
+                POWERFUL. PROTECTED. 
+                <span class="text-primary">
+                  PELCO.
+                </span>
               </h1>
-              <p class="mt-6 text-lg max-w-2xl">Get Pelco pricing, reviews, or a quote from experts today for your video security needs. Trusted worldwide for protecting people and assets.</p>
+              <!-- Header description -->
+              <p class="mt-6 text-lg max-w-2xl md:max-w-[45%]">
+                Get Pelco pricing, reviews, or a quote from experts today for your video security needs. Trusted worldwide for protecting people and assets.
+              </p>
+              <!-- Header CTA -->
               <div class="">
                 <a href="#" class="mr-4 mt-8 inline-flex items-center rounded-full border border-transparent bg-primary px-5 py-2 text-base font-medium text-white shadow-sm hover:bg-secondary">Get
                   Expert Help Today</a>
@@ -127,11 +136,13 @@
     <!-- 2. Trusted By -->
     <div class="bg-gray-100 flex flex-col justify-center w-full py-4">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h5 class="text-xl font-semibold text-gray-500 flex justify-center">Trusted across the
-          globe</h5>
+        <!-- Trusted by title -->
+        <h5 class="text-xl font-semibold text-gray-500 flex justify-center">
+          Trusted across the globe
+        </h5>
         <!-- Used 3xl here, but feel free to try other max-widths based on your needs -->
         <div class="mx-auto max-w-5xl">
-          <!-- Content goes here -->
+          <!-- Icons go here -->
           <ul role="list" class="w-full grid grid-cols-4 gap-x-8 gap-y-4 sm:gap-x-16 sm:px-4 md:gap-x-8 md:grid-cols-8 px-2 pb-4 pt-2">
             <li class="relative">
               <div class="w-full h-full rounded-2xl flex justify-center items-center">
@@ -189,6 +200,7 @@
               <div class="mx-auto max-w-7xl">
                 <div class="lg:grid lg:grid-cols-12 lg:gap-8 lg:items-center">
                   <div class="px-4 sm:px-6 sm:text-center md:mx-auto md:max-w-2xl lg:col-span-6 lg:flex lg:items-center lg:text-left">
+                    <!-- text content -->
                     <div class="">
                       <h2 class="font-bold tracking-tight text-black text-3xl">BE A PART OF THE PELCO LEGACY</h2>
                       <p class="mt-4 text-base text-black">Put your business in focus with intelligent video security
@@ -236,9 +248,10 @@
                     <div class="bg-tertiary sm:mx-auto sm:w-full sm:max-w-md sm:overflow-hidden rounded-2xl">
                       <div class="">
                         <div class="bg-black p-4 sm:px-10 flex flex-col justify-center rounded-t-2xl">
-                          <!-- <span class="w-full text-center text-primary text-lg font-bold">To be determined</span> -->
+                          <!-- Form title -->
                           <h3 class="mt-2 w-full text-center text-white text-lg font-bold">Get a free quote, consultation, or demo today. Let our experts answer your questions.</h3>
                         </div>
+                        <!-- Eloqua Form -->
                         <form method="post" name="UntitledForm-1665586017996" action="https://s61088445.t.eloqua.com/e/f2" onsubmit="return handleFormSubmit(this)" id="form1343" class="elq-form px-4 py-8 sm:px-10 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-2 text-white">
 
                           <input value="UntitledForm-1665586017996" type="hidden" name="elqFormName">
@@ -1024,10 +1037,12 @@
         <div class="px-6 py-12 rounded-xl w-full shadow-xl bg-gray-100">
           <div class="space-y-2 lg:grid lg:grid-cols-2 lg:gap-x-4 lg:items-center">
             <div class="lg:col-span-1 flex justify-center mb-4 lg:mb-0 relative">
+              <!-- Video poster = thumbnail image -->
               <video class="rounded-2xl w-full h-64 max-w-2xl md:h-80 lg:h-100 shadow-lg bg-black"
                 id="videoTextCTA-video"
                 poster="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/pe-video-block-thumbnail.jpg"
                 >
+                <!-- VIDEO URL / make sure its hosted on internal. NOT YOUTUBE -->
                 <source src="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/A%20Legacy%20of%20Video%20Security.mp4"
                   type="video/mp4"/>
               </video>
@@ -1035,12 +1050,15 @@
                 <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-24 h-24 text-primary self-center">
                   <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm14.024-.983a1.125 1.125 0 010 1.966l-5.603 3.113A1.125 1.125 0 019 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113z" clip-rule="evenodd" />
                 </svg> -->
+                <!-- Play button -->
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-24 h-24 text-white self-center">
                   <path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clip-rule="evenodd" />
                 </svg>
                               
               </div>
               
+              <!-- SAVE THIS START -->
+
               <!-- <video class="rounded-2xl w-full h-64 max-w-2xl md:h-80 lg:h-100 shadow-lg bg-black" 
                 controls
                 poster="https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/pe-video-block-thumbnail.jpg"
@@ -1056,8 +1074,11 @@
                 allowfullscreen=""
                 >
               </iframe> -->
+
+              <!-- SAVE THIS END -->
             </div>
             <div class="lg:col-span-1 flex justify-center">
+              <!-- Text Content -->
               <div class="lg:pl-10 mt-4 md:mt-0 lg:pr-4 max-w-2xl">
                 <h3 class="text-2xl font-bold tracking-tight text-tertiary">EXPERIENCE THE POWER OF PELCO</h3>
                 <p class="mt-2 text-base tracking-tight text-tertiary">For over 60 years, Pelco has been at the forefront of revolutionizing video security with major advancements in camera solutions, tools, and technology.</p>
@@ -1110,20 +1131,24 @@
 
         </div>
         <ul role="list" class="mt-8 grid grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-3 sm:gap-x-8 md:gap-x-12">
+          <!-- ITEM 1 -->
           <li class="relative">
             <div class="group aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-2xl shadow-lg">
               <img src="https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=512&amp;q=80" alt="" class="pointer-events-none object-cover">
               <!-- <button type="button" class="absolute inset-0 focus:outline-none">
-            <span class="sr-only">View details for IMG_4985.HEIC</span>
-          </button> -->
+                <span class="sr-only">View details</span>
+              </button> -->
             </div>
             <div class="">
-              <h6 class="mt-4 text-center pointer-events-none block text-lg font-bold text-gray-900">INTEGRATES WITH
-                YOUR TOOLS</h6>
-              <p class="mt-2 text-center pointer-events-none block text-base font-medium text-gray-500">Pelco cameras
-                are built on an open platform and seamlessly integrate with your security operations</p>
+              <h6 class="mt-4 text-center pointer-events-none block text-lg font-bold text-gray-900">
+                INTEGRATES WITH YOUR TOOLS
+              </h6>
+              <p class="mt-2 text-center pointer-events-none block text-base font-medium text-gray-500">
+                Pelco cameras are built on an open platform and seamlessly integrate with your security operations
+              </p>
             </div>
           </li>
+          <!-- ITEM 2 -->
           <li class="relative">
             <div class="group aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-2xl shadow-lg">
               <img src="https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=512&amp;q=80" alt="" class="pointer-events-none object-cover">
@@ -1136,6 +1161,7 @@
                 cameras can be customized to meet your aesthetic or environmental requirements</p>
             </div>
           </li>
+          <!-- ITEM 3 -->
           <li class="relative">
             <div class="group aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-2xl shadow-lg">
               <img src="https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=512&amp;q=80" alt="" class="pointer-events-none object-cover">
@@ -1148,6 +1174,7 @@
                 are designed to be well-protected against corrosion, dust, water, and physical damages</p>
             </div>
           </li>
+          <!-- ITEM 4 -->
           <li class="relative">
             <div class="group aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-2xl shadow-lg">
               <img src="https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=512&amp;q=80" alt="" class="pointer-events-none object-cover">
@@ -1161,6 +1188,7 @@
               </p>
             </div>
           </li>
+          <!-- ITEM 5 -->
           <li class="relative">
             <div class="group aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-2xl shadow-lg">
               <img src="https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=512&amp;q=80" alt="" class="pointer-events-none object-cover">
@@ -1173,6 +1201,7 @@
                 detection and response time with innovative AI-powered software analytics</p>
             </div>
           </li>
+          <!-- ITEM 6 -->
           <li class="relative">
             <div class="group aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-2xl shadow-lg">
               <img src="https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=512&amp;q=80" alt="" class="pointer-events-none object-cover">
@@ -1198,11 +1227,13 @@
           <div class="absolute w-full h-full">
             <div class="mx-auto max-w-6xl py-8 px-8 z-10 h-full flex items-center">
               <div class="max-w-3xl">
-                <span class="text-lg text-primary font-bold block">READY TO FUTURE PROOF YOUR VIDEO SECURITY
-                  TODAY?</span>
-                <h2 class="mt-2 text-3xl font-bold tracking-tight block text-white">Let our experts help you choose the
-                  right Pelco solution for your security needs</h2>
-                <div class="mt-8 flex">
+                <span class="text-lg text-primary font-bold block">
+                  READY TO FUTURE PROOF YOUR VIDEO SECURITY TODAY?
+                </span>
+                <h2 class="mt-2 text-3xl font-bold tracking-tight block text-white">
+                  Let our experts help you choose the right Pelco solution for your security needs
+                </h2>
+                <div class="mt-8 flex">                       
                   <div class="inline-flex rounded-2xl shadow">
                     <a href="#" class="inline-flex items-center justify-center rounded-3xl border border-transparent bg-primary px-5 py-3 text-base font-medium text-white hover:bg-secondary">Get
                       a demo</a>
@@ -1299,8 +1330,95 @@
 
 
     <!-- Footer -->
-    <!-- new style -->
-    <footer class="mt-16 bg-gray-100" aria-labelledby="footer-heading">
+    <!-- new v2 -->
+    <footer class="bg-black mt-16">
+      <h2 id="footer-heading" class="sr-only">Footer</h2>
+      <div class="flex flex-col flex-flow space-y-4 md:space-y-0 md:flex-row justify-center items-center md:justify-between mx-auto max-w-7xl py-12 lg:py-16 px-4 sm:px-6 lg:px-8">
+        <!-- logo -->
+        <div class="flex flex-col items-center">
+          <img class="h-16" src="https://assets.pelco.com/media/26f46b2c-e15c-411f-b54e-47269077614a/Pelco-Logo.png" alt="Pelco">
+          <p class="mt-4 text-base text-white">625 W. Alluvial, Fresno, CA 94711</p>
+        </div>
+        <!-- social -->
+        <div class="flex space-x-2">
+          <a href="https://www.facebook.com/pelcovideo?elqTrackId=e3d92f721279426d8b91aba9eabafeba" class="text-primary hover:text-secondary pr-2" target="_blank">
+            <span class="sr-only">Facebook</span>
+            <svg class="h-12 w-12" version="1.1" viewBox="0 0 60 60">
+              <g fill="#00729D" fill-rule="evenodd" id="black" stroke="none" stroke-width="1" aria-hidden="true">
+                <g id="facebook">
+                  <path d="M30,60 C46.5685433,60 60,46.5685433 60,30 C60,13.4314567 46.5685433,0 30,0 C13.4314567,0 0,13.4314567 0,30 C0,46.5685433 13.4314567,60 30,60 Z" fill="#00729D" id="Facebook"></path>
+                  <path d="M25.4622239,47.314313 L25.4622239,29.9989613 L21.9432889,29.9989612 L21.9432889,24.2593563 L25.4622239,24.2593563 L25.4622239,20.7883864 C25.4622239,16.1066422 26.8619948,12.730619 31.9881023,12.730619 L38.0863595,12.730619 L38.0863595,18.45844 L33.7922546,18.45844 C31.6418944,18.45844 31.1518737,19.8873763 31.1518737,21.3837609 L31.1518737,24.2593553 L37.7694231,24.2593558 L36.8661728,29.9989613 L31.1518737,29.9989613 L31.1518737,47.3143123 L25.4622239,47.314313 Z" fill="#FFFFFF"></path>
+                </g>
+              </g>
+            </svg>
+          </a>
+
+          <a href="https://www.youtube.com/pelcovideo?elqTrackId=2aebd7204a10456780c520a2b25af3bb" class="text-primary hover:text-secondary pr-2" target="_blank">
+            <span class="sr-only">Youtube</span>
+            <svg id="youtube" class="h-12 w-12" viewBox="0 0 1000 1000">
+              <g>
+                <path fill="#00729D" d="M500,1000L500,1000C223.9,1000,0,776.1,0,500v0C0,223.9,223.9,0,500,0h0c276.1,0,500,223.9,500,500v0C1000,776.1,776.1,1000,500,1000z">
+                </path>
+                <path fill="#FFFFFF" d="M818.2,339.1c-7.6-28.8-30.1-51.4-58.7-59.1c-51.8-14-259.4-14-259.4-14s-207.7,0-259.4,14c-28.6,7.7-51.1,30.3-58.7,59.1C168,391.2,168,500,168,500s0,108.8,13.9,160.9c7.6,28.8,30.1,51.4,58.7,59.1c51.8,14,259.4,14,259.4,14s207.7,0,259.4-14c28.6-7.7,51.1-30.3,58.7-59.1C832,608.8,832,500,832,500S832,391.2,818.2,339.1zM432.1,598.7V401.3L605.6,500L432.1,598.7z">
+                </path>
+              </g>
+            </svg>
+          </a>
+
+          <a href="https://twitter.com/pelcovideo?elqTrackId=f1520b4f67994472a3e1267d4ebf0068" class="text-primary hover:text-secondary pr-2" target="_blank">
+            <span class="sr-only">Twitter</span>
+            <svg id="twitter" class="h-12 w-12" viewBox="0 0 48 48">
+              <circle cx="24" cy="24" fill="#00729D" r="24"></circle>
+              <g>
+                <g>
+                  <path d="M36.8,15.4c-0.9,0.5-2,0.8-3,0.9c1.1-0.7,1.9-1.8,2.3-3.1c-1,0.6-2.1,1.1-3.4,1.4c-1-1.1-2.3-1.8-3.8-1.8c-2.9,0-5.3,2.5-5.3,5.7c0,0.4,0,0.9,0.1,1.3c-4.4-0.2-8.3-2.5-10.9-5.9c-0.5,0.8-0.7,1.8-0.7,2.9c0,2,0.9,3.7,2.3,4.7c-0.9,0-1.7-0.3-2.4-0.7c0,0,0,0.1,0,0.1c0,2.7,1.8,5,4.2,5.6c-0.4,0.1-0.9,0.2-1.4,0.2c-0.3,0-0.7,0-1-0.1c0.7,2.3,2.6,3.9,4.9,3.9c-1.8,1.5-4.1,2.4-6.5,2.4c-0.4,0-0.8,0-1.3-0.1c2.3,1.6,5.1,2.6,8.1,2.6c9.7,0,15-8.6,15-16.1c0-0.2,0-0.5,0-0.7C35.2,17.6,36.1,16.6,36.8,15.4z" fill="#FFFFFF"></path>
+                </g>
+              </g>
+            </svg>
+          </a>
+
+          <a href="https://www.linkedin.com/company/pelco?elqTrackId=cbb1235228a74958909ade07d6e8007d" class="text-primary hover:text-secondary pr-2" target="_blank">
+            <span class="sr-only">LinkedIn</span>
+            <svg class="h-12 w-12" id="Linkedin" viewBox="0 0 32 32">
+              <g>
+                <circle clip-rule="evenodd" cx="16" cy="16" fill="#00729D" fill-rule="evenodd" r="16"></circle>
+                <g>
+                  <rect fill="#FFFFFF" height="14" width="4" x="7" y="11"></rect>
+                  <path d="M20.499,11c-2.791,0-3.271,1.018-3.499,2v-2h-4v14h4v-8c0-1.297,0.703-2,2-2c1.266,0,2,0.688,2,2v8h4v-7C25,14,24.479,11,20.499,11z" fill="#FFFFFF"></path>
+                  <circle cx="9" cy="8" fill="#FFFFFF" r="2"></circle>
+                </g>
+              </g>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <!-- Links -->
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <ul class="flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0 justify-center items-center w-full">
+          <li class="">
+            <a href="https://www.pelco.com/about/legal/end-user-license-agreement-eula/?elqTrackId=07a06953fdd14a198434979bb73872f7" class="text-base text-white hover:text-primary ">End User License Agreement – Camera Firmware
+              EULA</a>
+          </li>
+          <li>
+            <a href="https://www.pelco.com/about/legal/pelco-communication-preference-center/?elqTrackId=8e0e394f4f7f4d198d5242418ac610fa" class="text-base text-white hover:text-primary ">Preference Center</a>
+          </li>
+          <li>
+            <a href="https://www.pelco.com/about/legal/pelco-privacy-policy/?elqTrackId=2a7af634ad3745d5bfd369526bb0dfd5" class="text-base text-white hover:text-primary ">Privacy and Cookie Policy</a>
+          </li>
+          <li>
+            <a href="https://www.motorolasolutions.com/en_us/about/privacy-policy.html?elqTrackId=6d03e08b7db240fda210e7660555815c#californiaresidents" class="text-base text-white hover:text-primary ">Do Not Sell My Personal Information</a>
+          </li>
+        </ul>
+
+
+      </div>
+      <!-- copyright -->
+      <div class="mt-12 border-t border-gray-200 py-8">
+        <p class="text-base text-white text-center">©Copyright 2022</p>
+      </div>
+    </footer>
+
+    <!-- <footer class="mt-16 bg-black" aria-labelledby="footer-heading">
       <h2 id="footer-heading" class="sr-only">Footer</h2>
       <div class="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
         <div class="xl:grid xl:grid-cols-3 xl:gap-8">
@@ -1357,19 +1475,11 @@
                   </g>
                 </svg>
               </a>
-
-              <!-- <a href="#" class="text-gray-400 hover:text-gray-500">
-            <span class="sr-only">Dribbble</span>
-            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path fill-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z" clip-rule="evenodd" />
-            </svg>
-          </a> -->
             </div>
           </div>
           <div class="mt-12 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div class="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <!-- <h3 class="text-base font-medium text-gray-900">Solutions</h3> -->
                 <ul role="list" class="mt-4 space-y-4">
                   <li>
                     <a href="https://www.pelco.com/about/legal/end-user-license-agreement-eula/?elqTrackId=07a06953fdd14a198434979bb73872f7" class="text-base text-gray-500 hover:text-gray-900">End User License Agreement – Camera Firmware
@@ -1381,7 +1491,6 @@
                 </ul>
               </div>
               <div class="mt-12 md:mt-0">
-                <!-- <h3 class="text-base font-medium text-gray-900">Support</h3> -->
                 <ul role="list" class="mt-4 space-y-4">
                   <li>
                     <a href="https://www.pelco.com/about/legal/pelco-communication-preference-center/?elqTrackId=8e0e394f4f7f4d198d5242418ac610fa" class="text-base text-gray-500 hover:text-gray-900">Preference Center</a>
@@ -1392,7 +1501,6 @@
             </div>
             <div class="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <!-- <h3 class="text-base font-medium text-gray-900">Company</h3> -->
                 <ul role="list" class="mt-4 space-y-4">
                   <li>
                     <a href="https://www.pelco.com/about/legal/pelco-privacy-policy/?elqTrackId=2a7af634ad3745d5bfd369526bb0dfd5" class="text-base text-gray-500 hover:text-gray-900">Privacy and Cookie Policy</a>
@@ -1402,7 +1510,6 @@
                 </ul>
               </div>
               <div class="mt-12 md:mt-0">
-                <!-- <h3 class="text-base font-medium text-gray-900">Legal</h3> -->
                 <ul role="list" class="mt-4 space-y-4">
                   <li>
                     <a href="https://www.motorolasolutions.com/en_us/about/privacy-policy.html?elqTrackId=6d03e08b7db240fda210e7660555815c#californiaresidents" class="text-base text-gray-500 hover:text-gray-900">Do Not Sell My Personal Information</a>
@@ -1417,7 +1524,7 @@
           <p class="text-base text-gray-400 xl:text-center">Copyright© 2022</p>
         </div>
       </div>
-    </footer>
+    </footer> -->
 
     <script src="" async defer></script>
   <script defer>

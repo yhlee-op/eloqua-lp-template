@@ -727,6 +727,16 @@ html {
   background: linear-gradient(180deg, rgba(255,255,255,1) 40%, rgba(255,255,255,0) 100%);
 }
 
+/* .bgGradient-tablet {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 460px, rgba(255,255,255,0) 100%);  
+  } */
+
+/* .bgGradient-desktop {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 720px, rgba(255,255,255,0) 100%);  
+  } */
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -1043,10 +1053,10 @@ html {
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
-.space-y-8 > :not([hidden]) ~ :not([hidden]) {
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
-  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -1055,10 +1065,10 @@ html {
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+.space-y-8 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
-  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
 
 .self-center {
@@ -1487,11 +1497,6 @@ html {
   color: rgb(8 91 125 / var(--tw-text-opacity));
 }
 
-.hover\:text-gray-500:hover {
-  --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
-}
-
 .hover\:text-gray-900:hover {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
@@ -1517,11 +1522,6 @@ html {
 }
 
 @media (min-width: 480px) {
-  .sm\:bgGradient-desktop {
-    background: rgb(255,255,255);
-    background: linear-gradient(90deg, rgba(255,255,255,1) 680px, rgba(255,255,255,0) 100%);
-  }
-
   .sm\:col-span-1 {
     grid-column: span 1 / span 1;
   }
@@ -1591,10 +1591,6 @@ html {
     overflow: hidden;
   }
 
-  .sm\:bg-marquee-desktop {
-    background-image: url('https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/01-SarixEnhanced3-Family-Header%20(1).jpg');
-  }
-
   .sm\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -1608,10 +1604,6 @@ html {
   .sm\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
-  }
-
-  .sm\:pb-4 {
-    padding-bottom: 1rem;
   }
 
   .sm\:pb-8 {
@@ -1629,6 +1621,11 @@ html {
 }
 
 @media (min-width: 768px) {
+  .md\:bgGradient-desktop {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 40%, rgba(255,255,255,0) 100%);
+  }
+
   .md\:col-span-4 {
     grid-column: span 4 / span 4;
   }
@@ -1652,6 +1649,10 @@ html {
 
   .md\:max-h-100 {
     max-height: 25rem;
+  }
+
+  .md\:max-w-\[45\%\] {
+    max-width: 45%;
   }
 
   .md\:max-w-2xl {
@@ -1678,6 +1679,14 @@ html {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
+  .md\:justify-between {
+    justify-content: space-between;
+  }
+
   .md\:gap-8 {
     gap: 2rem;
   }
@@ -1690,6 +1699,31 @@ html {
   .md\:gap-x-12 {
     -moz-column-gap: 3rem;
          column-gap: 3rem;
+  }
+
+  .md\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0px * var(--tw-space-y-reverse));
+  }
+
+  .md\:space-x-8 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(2rem * var(--tw-space-x-reverse));
+    margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .md\:bg-marquee-desktop {
+    background-image: url('https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/01-SarixEnhanced3-Family-Header%20(1).jpg');
+  }
+
+  .md\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .md\:pb-4 {
+    padding-bottom: 1rem;
   }
 }
 

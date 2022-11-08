@@ -13,8 +13,16 @@
     background: rgb(255,255,255);
     background: linear-gradient(180deg, rgba(255,255,255,1) 40%, rgba(255,255,255,0) 100%);
   }
+  /* .bgGradient-tablet {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 460px, rgba(255,255,255,0) 100%);  
+  } */
+  /* .bgGradient-desktop {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 720px, rgba(255,255,255,0) 100%);  
+  } */
   .bgGradient-desktop {
     background: rgb(255,255,255);
-    background: linear-gradient(90deg, rgba(255,255,255,1) 680px, rgba(255,255,255,0) 100%);  
+    background: linear-gradient(90deg, rgba(255,255,255,1) 40%, rgba(255,255,255,0) 100%);  
   }
 }
