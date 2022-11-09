@@ -1015,10 +1015,6 @@ html {
   justify-content: space-between;
 }
 
-.gap-8 {
-  gap: 2rem;
-}
-
 .gap-x-8 {
   -moz-column-gap: 2rem;
        column-gap: 2rem;
@@ -1063,12 +1059,6 @@ html {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
-.space-y-8 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
 
 .self-center {
@@ -1178,7 +1168,7 @@ html {
 }
 
 .bg-marquee-mobile {
-  background-image: url('https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/07-Optera-Family-Header-mobile.jpg');
+  background-image: url('https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/Pelco/06-SarixMulti-Family-Header-mobile.jpg');
 }
 
 .bg-cover {
@@ -1309,10 +1299,6 @@ html {
 
 .pr-2 {
   padding-right: 0.5rem;
-}
-
-.pt-8 {
-  padding-top: 2rem;
 }
 
 .text-left {
@@ -1497,11 +1483,6 @@ html {
   color: rgb(8 91 125 / var(--tw-text-opacity));
 }
 
-.hover\:text-gray-900:hover {
-  --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity));
-}
-
 .focus\:border-primary:focus {
   --tw-border-opacity: 1;
   border-color: rgb(0 114 157 / var(--tw-border-opacity));
@@ -1675,20 +1656,12 @@ html {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .md\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .md\:flex-row {
     flex-direction: row;
   }
 
   .md\:justify-between {
     justify-content: space-between;
-  }
-
-  .md\:gap-8 {
-    gap: 2rem;
   }
 
   .md\:gap-x-8 {
@@ -1714,7 +1687,7 @@ html {
   }
 
   .md\:bg-marquee-desktop {
-    background-image: url('https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/07-Optera-Family-Header%20(1).jpg');
+    background-image: url('https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/Pelco/06-SarixMulti-Family-Header.jpg');
   }
 
   .md\:px-6 {
@@ -1822,35 +1795,5 @@ html {
 
   .lg\:text-left {
     text-align: left;
-  }
-}
-
-@media (min-width: 1440px) {
-  .xl\:col-span-1 {
-    grid-column: span 1 / span 1;
-  }
-
-  .xl\:col-span-2 {
-    grid-column: span 2 / span 2;
-  }
-
-  .xl\:mt-0 {
-    margin-top: 0px;
-  }
-
-  .xl\:grid {
-    display: grid;
-  }
-
-  .xl\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .xl\:gap-8 {
-    gap: 2rem;
-  }
-
-  .xl\:text-center {
-    text-align: center;
   }
 }
