@@ -10,8 +10,8 @@ module.exports = {
       xl: '1440px',
     },
     backgroundImage: {
-      'marquee-desktop': "url('https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/01-SarixEnhanced3-Family-Header%20(1).jpg')",
-      'marquee-mobile': "url('https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/eloqua-lp-assets/01-SarixEnhanced3-Family-Header-mobile.jpg')"
+      'marquee-desktop': "url('https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/Pelco/06-SarixMulti-Family-Header.jpg')",
+      'marquee-mobile': "url('https://3396890.fs1.hubspotusercontent-na1.net/hubfs/3396890/Pelco/06-SarixMulti-Family-Header-mobile.jpg')"
     },
     extend: {
       colors: {
